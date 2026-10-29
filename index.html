@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RONBO.FIT — Eat well. Train strong. Live present.</title>
+<style>
+  :root{
+    --brand:#0d9488; --brand-dark:#0b7a6e; --ink:#1f2a44; --muted:#5b6b82;
+    --bg:#f6faf9; --line:#e3ecea;
+    --cta1:#FF4D2E; --cta2:#FF2E88;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Cabecera de marca compacta ---------- */
+  header{padding:30px 0 0;text-align:center}
+  .brand-icons{display:flex;justify-content:center;gap:15px;color:var(--brand)}
+  .brand-icons svg{width:31px;height:31px}
+  .wordmark{font-size:32px;font-weight:800;letter-spacing:.06em;color:var(--brand);margin-top:8px}
+  .slogan{font-size:16px;font-weight:600;margin-top:5px}
+  .slogan-es{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+  /* ---------- Titular breve + botón ---------- */
+  .hero{text-align:center;padding:24px 0 4px}
+  h1{font-size:27px;line-height:1.22;font-weight:800}
+  h1 .es{display:block;font-size:17.5px;font-weight:700;color:var(--muted);margin-top:7px;line-height:1.3}
+  .hero .sub{font-size:15.5px;line-height:1.5;margin-top:12px}
+  .hero .sub .es{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+  .cta{display:block;max-width:420px;margin:22px auto 0;
+    background:linear-gradient(100deg,var(--cta1),var(--cta2));color:#fff;
+    font-weight:800;font-size:19px;line-height:1.25;text-align:center;
+    padding:17px 26px;border-radius:999px;text-decoration:none;
+    box-shadow:0 10px 24px rgba(255,46,110,.32)}
+  .cta .es{display:block;font-weight:700;font-size:15px;opacity:.94;margin-top:2px}
+  .cta-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:10px}
+
+  /* ---------- Recursos: lista brevísima, iconos de la app ---------- */
+  .features{max-width:520px;margin:26px auto 0;text-align:left}
+  .feat{display:flex;align-items:center;gap:13px;padding:9px 2px}
+  .feat svg{flex:0 0 auto;width:28px;height:28px;color:var(--brand)}
+  .feat p{font-size:15.5px;font-weight:600;line-height:1.35}
+  .feat p .es{color:var(--muted);font-weight:500;font-size:14px}
+
+  /* ---------- Cómo funciona: 3 pasos cortos en una fila ---------- */
+  .steps{max-width:560px;margin:26px auto 0;border-top:1px solid var(--line);padding-top:20px}
+  .steps-title{text-align:center;font-size:13px;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brand)}
+  .steps-title .es{color:var(--muted);letter-spacing:.1em}
+  .steps-row{display:flex;gap:10px;margin-top:14px}
+  .step{flex:1;text-align:center;padding:0 2px}
+  .step .num{display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;
+    font-weight:800;font-size:15px}
+  .step p{font-size:13.5px;font-weight:600;line-height:1.35;margin-top:8px}
+  .step p .es{display:block;color:var(--muted);font-weight:500;font-size:12.5px;margin-top:2px}
+
+  /* ---------- Bienestar integral: línea destacada ---------- */
+  .wellbeing{max-width:560px;margin:28px auto 0;text-align:center;
+    background:#eef6f4;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .wellbeing .wb-en{font-size:17.5px;font-weight:800;color:var(--brand-dark)}
+  .wellbeing .wb-es{font-size:14px;font-weight:600;color:var(--muted);margin-top:3px}
+
+  /* ---------- Firma ---------- */
+  .signature{margin:34px auto 0;max-width:520px;border-top:1px solid var(--line);
+    padding-top:24px;display:flex;gap:16px;align-items:center;text-align:left}
+  .signature img{flex:0 0 auto;width:92px;height:92px;border-radius:50%;
+    object-fit:cover;object-position:center;border:3px solid var(--brand)}
+  .sig-name{font-size:19px;font-weight:800}
+  .sig-role{font-size:14.5px;font-weight:700;color:var(--brand);margin-top:2px}
+  .sig-role .es{color:var(--muted);font-weight:600}
+  .sig-line{font-size:13.5px;color:var(--muted);line-height:1.45;margin-top:5px}
+  .sig-social{font-size:13.5px;margin-top:4px}
+  .sig-social b{color:var(--brand)}
+
+
+  /* ---------- Papel tapiz: iconos de marca BRILLANTES (ajuste 2026-10-26 07:59) ---------- */
+  .wallpaper{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .wallpaper svg{position:absolute;color:#2dd4bf;
+    filter:drop-shadow(0 0 5px rgba(45,212,191,.75)) drop-shadow(0 0 14px rgba(45,212,191,.35))}
+  body > *:not(.wallpaper){position:relative;z-index:1}
+
+  /* ---------- Pie mínimo ---------- */
+  footer{margin-top:30px;padding:16px 0 26px;text-align:center}
+  footer .foot-brand{font-weight:800;color:var(--brand);letter-spacing:.05em;font-size:14px}
+  footer p{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
+
+  @media (min-width:760px){
+    .wordmark{font-size:38px}
+    h1{font-size:34px}
+    h1 .es{font-size:21px}
+    .signature img{width:108px;height:108px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wallpaper" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:3%;top:2%;width:46px;height:46px;transform:rotate(-14deg);opacity:0.6"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:86%;top:4%;width:52px;height:52px;transform:rotate(12deg);opacity:0.55"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:64%;top:13%;width:38px;height:38px;transform:rotate(-8deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:10%;top:18%;width:34px;height:34px;transform:rotate(18deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:92%;top:26%;width:42px;height:42px;transform:rotate(20deg);opacity:0.55"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:30%;top:7%;width:30px;height:30px;transform:rotate(-20deg);opacity:0.45"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:50%;top:20%;width:34px;height:34px;transform:rotate(10deg);opacity:0.4"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:78%;top:40%;width:48px;height:48px;transform:rotate(-16deg);opacity:0.5"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:4%;top:44%;width:40px;height:40px;transform:rotate(14deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:42%;top:36%;width:30px;height:30px;transform:rotate(-10deg);opacity:0.4"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:95%;top:56%;width:36px;height:36px;transform:rotate(8deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:16%;top:60%;width:46px;height:46px;transform:rotate(-18deg);opacity:0.55"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:68%;top:66%;width:34px;height:34px;transform:rotate(22deg);opacity:0.45"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:88%;top:78%;width:44px;height:44px;transform:rotate(-12deg);opacity:0.5"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:6%;top:80%;width:36px;height:36px;transform:rotate(16deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:34%;top:84%;width:42px;height:42px;transform:rotate(-6deg);opacity:0.5"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:56%;top:52%;width:30px;height:30px;transform:rotate(24deg);opacity:0.4"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:74%;top:90%;width:40px;height:40px;transform:rotate(-22deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:22%;top:38%;width:28px;height:28px;transform:rotate(12deg);opacity:0.38"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:48%;top:94%;width:38px;height:38px;transform:rotate(-8deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="brand-icons" aria-hidden="true">
+      <!-- Comidas: tazón con hoja (icono de la app) -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+      <!-- Entrenamiento: mancuerna (icono de la app) -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+      <!-- Progreso: barras con flecha (icono de la app) -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+    </div>
+    <div class="wordmark">RONBO.FIT</div>
+    <div class="slogan">Eat well. Train strong. Live present.</div>
+    <div class="slogan-es">Come bien. Entrena fuerte. Vive el presente.</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Training and food with a real coach — in one app.
+      <span class="es">Entrenamiento y alimentación con un entrenador real — en una sola app.</span>
+    </h1>
+    <p class="sub">Log your meals, follow your plan and watch your progress, day by day.
+      <span class="es">Registra tus comidas, sigue tu plan y mira tu progreso, día a día.</span>
+    </p>
+    <a class="cta" href="https://fit.ronbo.store">Join RONBO FIT
+      <span class="es">Únete a RONBO FIT · Crea tu cuenta</span>
+    </a>
+    <div class="cta-note">Free to join · Registro gratuito</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="features">
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
+      <p>Meal logging with AI analysis <span class="es">· Registro de comidas con análisis por IA</span></p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+      <p>A training plan made for you <span class="es">· Un plan de entrenamiento hecho para ti</span></p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
+      <p>Progress you can see and share <span class="es">· Progreso que se ve y se comparte</span></p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg>
+      <p>A real trainer reviews your progress <span class="es">· Un entrenador real revisa tu progreso</span></p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="steps-title">How it works <span class="es">· Cómo funciona</span></div>
+    <div class="steps-row">
+      <div class="step">
+        <span class="num">1</span>
+        <p>Sign up free<span class="es">Regístrate gratis</span></p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <p>Your trainer builds your plan<span class="es">Tu entrenador arma tu plan</span></p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <p>Log, train and progress<span class="es">Registra, entrena y progresa</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wellbeing">
+    <div class="wb-en">Well-being for body, mind and spirit</div>
+    <div class="wb-es">Bienestar físico, mental y espiritual</div>
+  </div>
+
+  <div class="signature">
+    <img src="foto-perfil-instagram.jpg" alt="Ronald Borges">
+    <div>
+      <div class="sig-name">Ronald Borges</div>
+      <div class="sig-role">CEO &amp; Creator <span class="es">· Fundador y creador</span></div>
+      <div class="sig-line">ISSA Certified Personal Trainer · Author of <i>“8 claves para vivir en el presente y ser felices”</i> · Memphis, TN</div>
+      <div class="sig-social">Follow along: <b>@ronaldborges590</b></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">RONBO FIT</div>
+    <p>fit.ronbo.store · No medical advice; always consult your physician about your health. / Sin consejo médico; consulta siempre a tu médico sobre tu salud.</p>
+  </div>
+</footer>
+
+</body>
+</html>
