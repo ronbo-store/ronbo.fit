@@ -63,6 +63,32 @@
   .wellbeing .wb-en{font-size:17.5px;font-weight:800;color:var(--brand-dark)}
   .wellbeing .wb-es{font-size:14px;font-weight:600;color:var(--muted);margin-top:3px}
 
+  /* ---------- RONBO.FIT Business: puerta falsa (construcción 2026-10-30) ---------- */
+  .business{max-width:560px;margin:30px auto 0;border:1.5px solid var(--brand);border-radius:14px;
+    padding:20px 18px;background:#ffffff;text-align:left}
+  .business .biz-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--brand);border:1px solid var(--brand);border-radius:999px;padding:3px 10px}
+  .business h2{font-size:20px;line-height:1.3;font-weight:800;margin-top:10px}
+  .business h2 .es{display:block;font-size:15px;font-weight:700;color:var(--muted);margin-top:4px;line-height:1.35}
+  .business ul{list-style:none;margin-top:10px}
+  .business li{font-size:14.5px;font-weight:600;line-height:1.45;padding:5px 0 5px 22px;position:relative}
+  .business li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+  .business li .es{color:var(--muted);font-weight:500}
+  .business .biz-lead{font-size:14.5px;line-height:1.5;margin-top:12px}
+  .business .biz-lead .es{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+  .business form{margin-top:6px}
+  .business label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
+  .business label .es{color:var(--muted);font-weight:600}
+  .business input{width:100%;font:inherit;font-size:15px;padding:11px 12px;border:1px solid #cbd5e1;
+    border-radius:10px;background:#fff;color:var(--ink)}
+  .business button{width:100%;margin-top:16px;background:var(--brand);color:#fff;font:inherit;
+    font-weight:800;font-size:16px;padding:14px 20px;border:0;border-radius:999px;cursor:pointer}
+  .business button[disabled]{opacity:.55;cursor:default}
+  .business .biz-msg{font-size:14px;font-weight:600;line-height:1.45;margin-top:12px;min-height:20px}
+  .business .biz-msg.ok{color:var(--brand-dark)}
+  .business .biz-msg.err{color:#b3261e}
+  .business .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
   /* ---------- Firma ---------- */
   .signature{margin:34px auto 0;max-width:520px;border-top:1px solid var(--line);
     padding-top:24px;display:flex;gap:16px;align-items:center;text-align:left}
@@ -203,6 +229,38 @@
       <div class="sig-social">Follow along: <b>@ronaldborges590</b></div>
     </div>
   </div>
+
+  <!-- RONBO.FIT Business — puerta falsa (construcción 2026-10-30):
+       anuncia la línea de gimnasios que AÚN NO EXISTE y recoge el
+       interés con un mini-formulario que el Worker convierte en UN
+       aviso a ronbo.fit@gmail.com (POST /business-lead). Nada se
+       guarda en la página ni en Firestore. La promesa encabeza con
+       el valor para los miembros; la privacidad del progreso es
+       virtud declarada, no letra pequeña. -->
+  <div class="business" id="business">
+    <span class="biz-tag">For gyms &amp; fitness chains</span>
+    <h2>More value for your members — training and food with your own coaching team, in one app.
+      <span class="es">Más valor para tus miembros: entrenamiento y alimentación con tu propio equipo de entrenadores, en una sola app.</span>
+    </h2>
+    <ul>
+      <li>Your locations and your whole trainer team, organized in one place. <span class="es">Tus sedes y todo tu equipo de entrenadores, organizados en un solo lugar.</span></li>
+      <li>Team training templates that respect each trainer's professional judgment. <span class="es">Plantillas de entrenamiento del equipo que respetan el criterio profesional de cada entrenador.</span></li>
+      <li>Privacy by design: each member's progress belongs to them and their own trainer — the gym never gets an open window into it. <span class="es">Privacidad por diseño: el progreso de cada miembro es suyo y de su propio entrenador — el gimnasio nunca recibe una ventana abierta a él.</span></li>
+    </ul>
+    <p class="biz-lead">RONBO.FIT Business is on its way. Join the early-access list and we'll write to you first.
+      <span class="es">RONBO.FIT Business viene en camino. Únete a la lista de acceso anticipado y te escribiremos primero.</span></p>
+    <form id="biz-form" novalidate>
+      <label for="biz-gym">Gym name <span class="es">· Nombre del gimnasio</span></label>
+      <input id="biz-gym" name="gym" type="text" maxlength="80" autocomplete="organization">
+      <label for="biz-city">City <span class="es">· Ciudad</span></label>
+      <input id="biz-city" name="city" type="text" maxlength="60" autocomplete="address-level2">
+      <label for="biz-email">Email <span class="es">· Correo</span></label>
+      <input id="biz-email" name="email" type="email" maxlength="120" autocomplete="email">
+      <div class="hp" aria-hidden="true"><input id="biz-hp" name="hp" type="text" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" id="biz-btn">Request early access · Quiero acceso anticipado</button>
+      <p class="biz-msg" id="biz-msg" role="status"></p>
+    </form>
+  </div>
 </div>
 
 <footer>
@@ -211,6 +269,46 @@
     <p>fit.ronbo.store · No medical advice; always consult your physician about your health. / Sin consejo médico; consulta siempre a tu médico sobre tu salud.</p>
   </div>
 </footer>
+
+<script>
+/* Puerta falsa Business: el formulario valida con las mismas
+   reglas que el Worker y envía SOLO los tres campos (+ señuelo).
+   Ante cualquier error lo escrito NO se borra; ante el éxito, el
+   estado «Recibido» sustituye a la acción. */
+(function () {
+  var form = document.getElementById('biz-form');
+  if (!form) return;
+  var ENDPOINT = 'https://ronbo-nutri-m8.hola-d30.workers.dev/business-lead';
+  var btn = document.getElementById('biz-btn');
+  var msg = document.getElementById('biz-msg');
+  function val(id) { return (document.getElementById(id).value || '').trim(); }
+  function say(text, cls) { msg.textContent = text; msg.className = 'biz-msg' + (cls ? ' ' + cls : ''); }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var gym = val('biz-gym'), city = val('biz-city'), email = val('biz-email');
+    if (gym.length < 2 || city.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      say('Please fill in all three fields and use a valid email. · Completa los tres campos y usa un correo válido.', 'err');
+      return;
+    }
+    btn.disabled = true;
+    say('', '');
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ gym: gym, city: city, email: email, hp: val('biz-hp') })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json().catch(function () { return {}; });
+    }).then(function () {
+      say("Received — thank you. We'll be in touch. · Recibido — gracias. Te contactaremos.", 'ok');
+      btn.textContent = 'Received ✓ · Recibido ✓';
+    }).catch(function () {
+      btn.disabled = false;
+      say('Something went wrong and nothing was sent — what you typed is still here. Please try again. · Algo falló y no se envió nada — lo que escribiste sigue aquí. Inténtalo de nuevo.', 'err');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
