@@ -4,75 +4,114 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RONBO.FIT — Eat well. Train strong. Live present.</title>
+<meta name="description" content="RONBO FIT: evidence-based goals, personal training plans, weekly meal menus with an automatic shopping list, your progress in one place and a real trainer by your side. / Metas con fundamento científico, planes de entrenamiento personales, menú semanal de comidas con lista de compras automática, tu progreso en un solo lugar y un entrenador real a tu lado.">
+<link rel="icon" type="image/webp" href="assets/coach-mascot.webp">
+<meta property="og:title" content="RONBO.FIT — Eat well. Train strong. Live present.">
+<meta property="og:description" content="Training and food, guided by science and a real coach — in one app. / Entrenamiento y alimentación, guiados por la ciencia y un entrenador real — en una sola app.">
+<meta property="og:image" content="assets/coach-mascot.webp">
+<meta property="og:type" content="website">
 <style>
   :root{
-    --brand:#0d9488; --brand-dark:#0b7a6e; --ink:#1f2a44; --muted:#5b6b82;
-    --bg:#f6faf9; --line:#e3ecea;
-    --cta1:#FF4D2E; --cta2:#FF2E88;
+    --brand:#0d9488; --brand-dark:#0b7a6e; --brand-soft:#e6f4f1;
+    --ink:#1f2a44; --muted:#5b6b82; --bg:#f6faf9; --line:#e3ecea; --card:#ffffff;
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
-  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .es{color:var(--muted)}
 
-  /* ---------- Cabecera de marca compacta ---------- */
-  header{padding:30px 0 0;text-align:center}
-  .brand-icons{display:flex;justify-content:center;gap:15px;color:var(--brand)}
-  .brand-icons svg{width:31px;height:31px}
-  .wordmark{font-size:32px;font-weight:800;letter-spacing:.06em;color:var(--brand);margin-top:8px}
-  .slogan{font-size:16px;font-weight:600;margin-top:5px}
-  .slogan-es{font-size:13.5px;color:var(--muted);margin-top:2px}
+  /* ---------- Barra superior ---------- */
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(246,250,249,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  .topbar .wm{font-size:21px;font-weight:800;letter-spacing:.06em;color:var(--brand)}
+  .topbar .mini-cta{background:#111;color:#fff;text-decoration:none;font-weight:700;font-size:14px;
+    padding:9px 18px;border-radius:999px}
 
-  /* ---------- Titular breve + botón ---------- */
-  .hero{text-align:center;padding:24px 0 4px}
-  h1{font-size:27px;line-height:1.22;font-weight:800}
-  h1 .es{display:block;font-size:17.5px;font-weight:700;color:var(--muted);margin-top:7px;line-height:1.3}
-  .hero .sub{font-size:15.5px;line-height:1.5;margin-top:12px}
-  .hero .sub .es{display:block;color:var(--muted);font-size:14px;margin-top:3px}
-  .cta{display:block;max-width:420px;margin:22px auto 0;
-    background:linear-gradient(100deg,var(--cta1),var(--cta2));color:#fff;
-    font-weight:800;font-size:19px;line-height:1.25;text-align:center;
-    padding:17px 26px;border-radius:999px;text-decoration:none;
-    box-shadow:0 10px 24px rgba(255,46,110,.32)}
-  .cta .es{display:block;font-weight:700;font-size:15px;opacity:.94;margin-top:2px}
-  .cta-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:10px}
+  /* ---------- Hero ---------- */
+  .hero{padding:38px 0 10px}
+  .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px}
+  .hero-art{width:210px;height:210px;border-radius:34px;overflow:hidden;flex:0 0 auto;
+    box-shadow:0 18px 40px rgba(11,122,110,.28);border:4px solid #fff}
+  .hero-art img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero h1{font-size:37px;line-height:1.16;font-weight:800;letter-spacing:-.01em}
+  .hero h1 .es{display:block;font-size:20px;font-weight:700;margin-top:9px;line-height:1.3}
+  .hero .what{font-size:16.5px;line-height:1.55;margin:16px auto 0;max-width:560px}
+  .hero .what .es{display:block;font-size:15px;margin-top:4px}
 
-  /* ---------- Recursos: lista brevísima, iconos de la app ---------- */
-  .features{max-width:520px;margin:26px auto 0;text-align:left}
-  .feat{display:flex;align-items:center;gap:13px;padding:9px 2px}
-  .feat svg{flex:0 0 auto;width:28px;height:28px;color:var(--brand)}
-  .feat p{font-size:15.5px;font-weight:600;line-height:1.35}
-  .feat p .es{color:var(--muted);font-weight:500;font-size:14px}
+  /* ---------- Botón de descarga (insignia provisional) ---------- */
+  /*
+    APP STORE BADGE — READ BEFORE EDITING:
+    RONBO FIT is NOT on the App Store yet (native apps come after Ronbo LLC
+    is created, January 2027). Apple forbids using its official
+    "Download on the App Store" badge for anything that is not an App Store
+    listing, so this is a CUSTOM badge-style button. It opens the installable
+    web app at https://fit.ronbo.store.
+    WHEN THE NATIVE iOS APP SHIPS: replace this whole <a class="appstore">
+    block with Apple's official badge artwork linking to the real App Store
+    URL, and delete this note.
+  */
+  .appstore{display:inline-flex;align-items:center;gap:12px;background:#111;color:#fff;
+    text-decoration:none;border-radius:16px;padding:12px 26px 13px;margin-top:24px;
+    box-shadow:0 12px 28px rgba(17,17,17,.28);text-align:left}
+  .appstore svg{width:30px;height:30px;flex:0 0 auto;fill:#fff}
+  .appstore .small{display:block;font-size:12.5px;font-weight:600;opacity:.85;line-height:1.2}
+  .appstore .big{display:block;font-size:21px;font-weight:800;line-height:1.2}
+  .install-note{font-size:13.5px;color:var(--muted);margin-top:12px;max-width:520px}
+  .install-note b{color:var(--ink)}
 
-  /* ---------- Cómo funciona: 3 pasos cortos en una fila ---------- */
-  .steps{max-width:560px;margin:26px auto 0;border-top:1px solid var(--line);padding-top:20px}
-  .steps-title{text-align:center;font-size:13px;font-weight:800;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--brand)}
-  .steps-title .es{color:var(--muted);letter-spacing:.1em}
-  .steps-row{display:flex;gap:10px;margin-top:14px}
-  .step{flex:1;text-align:center;padding:0 2px}
-  .step .num{display:inline-flex;align-items:center;justify-content:center;
-    width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;
-    font-weight:800;font-size:15px}
-  .step p{font-size:13.5px;font-weight:600;line-height:1.35;margin-top:8px}
-  .step p .es{display:block;color:var(--muted);font-weight:500;font-size:12.5px;margin-top:2px}
+  /* ---------- Secciones ---------- */
+  section{padding:42px 0 6px}
+  .sec-title{text-align:center;font-size:26px;font-weight:800;line-height:1.25}
+  .sec-title .es{display:block;font-size:16.5px;font-weight:700;margin-top:5px}
+  .sec-sub{text-align:center;font-size:15.5px;color:var(--muted);max-width:640px;margin:10px auto 0;line-height:1.55}
+  .sec-sub .es{display:block;font-size:14.5px;margin-top:3px}
 
-  /* ---------- Bienestar integral: línea destacada ---------- */
-  .wellbeing{max-width:560px;margin:28px auto 0;text-align:center;
-    background:#eef6f4;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-  .wellbeing .wb-en{font-size:17.5px;font-weight:800;color:var(--brand-dark)}
-  .wellbeing .wb-es{font-size:14px;font-weight:600;color:var(--muted);margin-top:3px}
+  /* ---------- Bondades ---------- */
+  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
+  .bcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+  .bcard .ic{width:46px;height:46px;border-radius:13px;background:var(--brand-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--brand)}
+  .bcard .ic svg{width:26px;height:26px}
+  .bcard h3{font-size:17.5px;font-weight:800;margin-top:12px;line-height:1.3}
+  .bcard h3 .es{display:block;font-size:14.5px;font-weight:700;margin-top:2px}
+  .bcard p{font-size:14.5px;line-height:1.55;margin-top:7px}
+  .bcard p .es{display:block;font-size:13.5px;margin-top:3px}
 
-  /* ---------- RONBO.FIT Business: puerta falsa (construcción 2026-10-30) ---------- */
-  .business{max-width:560px;margin:30px auto 0;border:1.5px solid var(--brand);border-radius:14px;
-    padding:20px 18px;background:#ffffff;text-align:left}
+  .privacy{margin-top:14px;background:var(--brand-dark);color:#fff;border-radius:18px;
+    padding:24px 22px;display:flex;gap:16px;align-items:flex-start}
+  .privacy .ic{flex:0 0 auto;width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.16);
+    display:flex;align-items:center;justify-content:center}
+  .privacy .ic svg{width:26px;height:26px}
+  .privacy h3{font-size:17.5px;font-weight:800;line-height:1.3}
+  .privacy h3 .es{display:block;font-size:14.5px;font-weight:700;opacity:.85;margin-top:2px;color:#fff}
+  .privacy p{font-size:14.5px;line-height:1.55;margin-top:7px}
+  .privacy p .es{display:block;font-size:13.5px;opacity:.85;margin-top:3px;color:#fff}
+
+  /* ---------- Cómo funciona ---------- */
+  .steps-row{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;
+    display:flex;gap:14px;align-items:flex-start;text-align:left}
+  .step .num{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+    width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;font-size:16px}
+  .step h3{font-size:16px;font-weight:800;line-height:1.3}
+  .step h3 .es{font-size:13.5px;font-weight:700}
+  .step p{font-size:14px;line-height:1.5;margin-top:4px}
+  .step p .es{font-size:13px}
+
+
+  /* ---------- RONBO.FIT Business (sección integrada 2026-11-09, conservada de la página anterior) ---------- */
+  .business{max-width:760px;margin:0 auto;border:1.5px solid var(--brand);border-radius:18px;
+    padding:26px 24px;background:#ffffff;text-align:left}
   .business .biz-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;
     text-transform:uppercase;color:var(--brand);border:1px solid var(--brand);border-radius:999px;padding:3px 10px}
-  .business h2{font-size:20px;line-height:1.3;font-weight:800;margin-top:10px}
+  .business h2{font-size:21px;line-height:1.3;font-weight:800;margin-top:10px}
   .business h2 .es{display:block;font-size:15px;font-weight:700;color:var(--muted);margin-top:4px;line-height:1.35}
   .business ul{list-style:none;margin-top:10px}
   .business li{font-size:14.5px;font-weight:600;line-height:1.45;padding:5px 0 5px 22px;position:relative}
-  .business li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+  .business li::before{content:"\2713";position:absolute;left:0;color:var(--brand);font-weight:800}
   .business li .es{color:var(--muted);font-weight:500}
   .business .biz-lead{font-size:14.5px;line-height:1.5;margin-top:12px}
   .business .biz-lead .es{display:block;color:var(--muted);font-size:14px;margin-top:3px}
@@ -89,148 +128,183 @@
   .business .biz-msg.err{color:#b3261e}
   .business .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 
-  /* ---------- Firma ---------- */
-  .signature{margin:34px auto 0;max-width:520px;border-top:1px solid var(--line);
-    padding-top:24px;display:flex;gap:16px;align-items:center;text-align:left}
-  .signature img{flex:0 0 auto;width:92px;height:92px;border-radius:50%;
-    object-fit:cover;object-position:center;border:3px solid var(--brand)}
-  .sig-name{font-size:19px;font-weight:800}
-  .sig-role{font-size:14.5px;font-weight:700;color:var(--brand);margin-top:2px}
-  .sig-role .es{color:var(--muted);font-weight:600}
-  .sig-line{font-size:13.5px;color:var(--muted);line-height:1.45;margin-top:5px}
-  .sig-social{font-size:13.5px;margin-top:4px}
-  .sig-social b{color:var(--brand)}
+  /* ---------- Cierre ---------- */
+  .final{margin:44px 0 0;background:var(--brand-soft);border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);padding:38px 0 42px;text-align:center}
+  .final h2{font-size:25px;font-weight:800;line-height:1.3}
+  .final h2 .es{display:block;font-size:16.5px;font-weight:700;margin-top:5px}
+  .final .appstore{margin-top:22px}
+  .final .install-note{margin-left:auto;margin-right:auto}
 
+  /* ---------- Pie ---------- */
+  footer{padding:28px 0 34px;text-align:center}
+  footer .foot-wm{font-size:19px;font-weight:800;letter-spacing:.06em;color:var(--brand)}
+  footer .foot-slogan{font-size:14.5px;font-weight:600;margin-top:4px}
+  footer .foot-slogan .es{font-size:13px;font-weight:500}
+  footer p{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+  footer a{color:var(--brand-dark);font-weight:700;text-decoration:none}
 
-  /* ---------- Papel tapiz: iconos de marca BRILLANTES (ajuste 2026-10-26 07:59) ---------- */
-  .wallpaper{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-  .wallpaper svg{position:absolute;color:#2dd4bf;
-    filter:drop-shadow(0 0 5px rgba(45,212,191,.75)) drop-shadow(0 0 14px rgba(45,212,191,.35))}
-  body > *:not(.wallpaper){position:relative;z-index:1}
-
-  /* ---------- Pie mínimo ---------- */
-  footer{margin-top:30px;padding:16px 0 26px;text-align:center}
-  footer .foot-brand{font-weight:800;color:var(--brand);letter-spacing:.05em;font-size:14px}
-  footer p{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.5}
-
+  @media (max-width:480px){
+    .topbar .wm{font-size:18px}
+    .topbar .mini-cta{font-size:12.5px;padding:8px 13px;white-space:nowrap}
+  }
   @media (min-width:760px){
-    .wordmark{font-size:38px}
-    h1{font-size:34px}
-    h1 .es{font-size:21px}
-    .signature img{width:108px;height:108px}
+    .hero{padding:56px 0 16px}
+    .hero-grid{flex-direction:row;text-align:left;gap:44px}
+    .hero-art{width:290px;height:290px;border-radius:42px}
+    .hero h1{font-size:50px}
+    .hero h1 .es{font-size:25px}
+    .hero .what{margin-left:0}
+    .install-note{margin-left:0}
+    .grid{grid-template-columns:1fr 1fr 1fr}
+    .steps-row{flex-direction:row}
+    .step{flex:1}
+    .sec-title{font-size:31px}
   }
 </style>
 </head>
 <body>
 
-<div class="wallpaper" aria-hidden="true">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:3%;top:2%;width:46px;height:46px;transform:rotate(-14deg);opacity:0.6"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:86%;top:4%;width:52px;height:52px;transform:rotate(12deg);opacity:0.55"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:64%;top:13%;width:38px;height:38px;transform:rotate(-8deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:10%;top:18%;width:34px;height:34px;transform:rotate(18deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:92%;top:26%;width:42px;height:42px;transform:rotate(20deg);opacity:0.55"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:30%;top:7%;width:30px;height:30px;transform:rotate(-20deg);opacity:0.45"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:50%;top:20%;width:34px;height:34px;transform:rotate(10deg);opacity:0.4"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:78%;top:40%;width:48px;height:48px;transform:rotate(-16deg);opacity:0.5"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:4%;top:44%;width:40px;height:40px;transform:rotate(14deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:42%;top:36%;width:30px;height:30px;transform:rotate(-10deg);opacity:0.4"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:95%;top:56%;width:36px;height:36px;transform:rotate(8deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:16%;top:60%;width:46px;height:46px;transform:rotate(-18deg);opacity:0.55"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:68%;top:66%;width:34px;height:34px;transform:rotate(22deg);opacity:0.45"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:88%;top:78%;width:44px;height:44px;transform:rotate(-12deg);opacity:0.5"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:6%;top:80%;width:36px;height:36px;transform:rotate(16deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:34%;top:84%;width:42px;height:42px;transform:rotate(-6deg);opacity:0.5"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:56%;top:52%;width:30px;height:30px;transform:rotate(24deg);opacity:0.4"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:74%;top:90%;width:40px;height:40px;transform:rotate(-22deg);opacity:0.5"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:22%;top:38%;width:28px;height:28px;transform:rotate(12deg);opacity:0.38"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="left:48%;top:94%;width:38px;height:38px;transform:rotate(-8deg);opacity:0.45"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="wm">RONBO.FIT</div>
+    <a class="mini-cta" href="https://fit.ronbo.store">Get the app · <span style="opacity:.8">Consigue la app</span></a>
+  </div>
 </div>
 
-<header>
-  <div class="wrap">
-    <div class="brand-icons" aria-hidden="true">
-      <!-- Comidas: tazón con hoja (icono de la app) -->
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-      <!-- Entrenamiento: mancuerna (icono de la app) -->
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-      <!-- Progreso: barras con flecha (icono de la app) -->
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-    </div>
-    <div class="wordmark">RONBO.FIT</div>
-    <div class="slogan">Eat well. Train strong. Live present.</div>
-    <div class="slogan-es">Come bien. Entrena fuerte. Vive el presente.</div>
-  </div>
-</header>
-
+<!-- ================= HERO ================= -->
 <div class="hero">
-  <div class="wrap">
-    <h1>Training and food with a real coach — in one app.
-      <span class="es">Entrenamiento y alimentación con un entrenador real — en una sola app.</span>
-    </h1>
-    <p class="sub">Log your meals, follow your plan and watch your progress, day by day.
-      <span class="es">Registra tus comidas, sigue tu plan y mira tu progreso, día a día.</span>
-    </p>
-    <a class="cta" href="https://fit.ronbo.store">Join RONBO FIT
-      <span class="es">Únete a RONBO FIT · Crea tu cuenta</span>
-    </a>
-    <div class="cta-note">Free to join · Registro gratuito</div>
+  <div class="wrap hero-grid">
+    <div class="hero-art">
+      <img src="assets/coach-mascot.webp" alt="Ronbo, the RONBO FIT virtual coach / Ronbo, el coach virtual de RONBO FIT" width="512" height="512">
+    </div>
+    <div>
+      <h1>Eat well. Train strong. Live present.
+        <span class="es">Come bien. Entrena fuerte. Vive el presente.</span>
+      </h1>
+      <p class="what">RONBO FIT brings your training, your meals and your progress together in one app — guided by science and by a real coach who knows you.
+        <span class="es">RONBO FIT reúne tu entrenamiento, tus comidas y tu progreso en una sola app — guiados por la ciencia y por un entrenador real que te conoce.</span>
+      </p>
+
+      <!-- Botón de descarga: ver la nota APP STORE BADGE en el CSS antes de tocarlo. -->
+      <a class="appstore" href="https://fit.ronbo.store" aria-label="Get the RONBO FIT app / Consigue la app de RONBO FIT">
+        <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span>
+          <span class="small">Get the app · Consigue la app</span>
+          <span class="big">RONBO FIT</span>
+        </span>
+      </a>
+      <p class="install-note">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b> — it installs like any other app, free.
+        <span class="es">En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b> — se instala como cualquier otra app, gratis.</span>
+      </p>
+    </div>
   </div>
 </div>
 
-<div class="wrap">
-  <div class="features">
-    <div class="feat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg>
-      <p>Meal logging with AI analysis <span class="es">· Registro de comidas con análisis por IA</span></p>
+<!-- ================= BONDADES ================= -->
+<section id="benefits">
+  <div class="wrap">
+    <h2 class="sec-title">Everything works together for your goal
+      <span class="es">Todo trabaja junto por tu meta</span>
+    </h2>
+    <p class="sec-sub">No scattered apps, no guesswork: one plan that connects what you eat, how you train and how you advance.
+      <span class="es">Sin apps sueltas ni adivinanzas: un solo plan que conecta lo que comes, cómo entrenas y cómo avanzas.</span>
+    </p>
+
+    <div class="grid">
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+        <h3>Goals with a scientific foundation <span class="es">Metas con fundamento científico</span></h3>
+        <p>Your calories, protein, carbs and fats are calculated from published sports-science research — and your health declaration adjusts them before anything is applied.
+          <span class="es">Tus calorías, proteína, carbohidratos y grasas se calculan desde investigaciones científicas publicadas — y tu declaración de salud los ajusta antes de aplicar nada.</span></p>
+      </div>
+
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg></div>
+        <h3>A training plan made for you <span class="es">Un plan de entrenamiento hecho para ti</span></h3>
+        <p>Your trainer builds your weekly plan, and the Automatic Program can propose the training split that fits your days — you always review it before it goes live.
+          <span class="es">Tu entrenador arma tu plan semanal, y el Programa Automático puede proponer la distribución que encaja con tus días — tú siempre lo revisas antes de activarlo.</span></p>
+      </div>
+
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg></div>
+        <h3>A weekly menu that plans itself <span class="es">Un menú semanal que se planifica solo</span></h3>
+        <p>Concrete dishes for every meal and every day, matched to your goals, with one-tap swaps that respect your allergies — and your shopping list builds itself.
+          <span class="es">Platos concretos para cada comida y cada día, ajustados a tus metas, con cambios en un toque que respetan tus alergias — y tu lista de compras se arma sola.</span></p>
+      </div>
+
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.4L12 15l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
+        <h3>Meals analyzed in seconds <span class="es">Comidas analizadas en segundos</span></h3>
+        <p>Snap a photo of your plate or dictate what you ate: the Coach estimates calories and macros, flags the labels behind the numbers and keeps your day on track.
+          <span class="es">Toma una foto de tu plato o dicta lo que comiste: el Coach estima calorías y macros, explica el fundamento de los números y mantiene tu día en ruta.</span></p>
+      </div>
+
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg></div>
+        <h3>Your progress, all in one place <span class="es">Tu progreso, todo en un solo lugar</span></h3>
+        <p>Weight, measurements, progress photos, water, streaks and badges — your whole journey at a glance, with a shareable card when you hit a milestone.
+          <span class="es">Peso, medidas, fotos de progreso, agua, rachas y logros — todo tu camino de un vistazo, con una tarjeta para compartir cuando alcanzas una meta.</span></p>
+      </div>
+
+      <div class="bcard">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg></div>
+        <h3>A coach and a trainer by your side <span class="es">Un coach y un entrenador a tu lado</span></h3>
+        <p>The virtual Coach answers your questions any time, and your real trainer follows your plan and your progress with you — you never train alone.
+          <span class="es">El Coach virtual responde tus preguntas en cualquier momento, y tu entrenador real sigue tu plan y tu progreso contigo — nunca entrenas solo.</span></p>
+      </div>
     </div>
-    <div class="feat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg>
-      <p>A training plan made for you <span class="es">· Un plan de entrenamiento hecho para ti</span></p>
-    </div>
-    <div class="feat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg>
-      <p>Progress you can see and share <span class="es">· Progreso que se ve y se comparte</span></p>
-    </div>
-    <div class="feat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg>
-      <p>A real trainer reviews your progress <span class="es">· Un entrenador real revisa tu progreso</span></p>
+
+    <div class="privacy">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><circle cx="12" cy="15.2" r="1.4" fill="#fff"/></svg></div>
+      <div>
+        <h3>Privacy first: your data is yours <span class="es">Privacidad primero: tus datos son tuyos</span></h3>
+        <p>A visible privacy seal inside the app, and nothing about your well-being is shared without your permission — your trainer sees your training, not your private health declarations.
+          <span class="es">Un sello de privacidad visible dentro de la app, y nada de tu bienestar se comparte sin tu permiso — tu entrenador ve tu entrenamiento, no tus declaraciones privadas de salud.</span></p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="steps">
-    <div class="steps-title">How it works <span class="es">· Cómo funciona</span></div>
+<!-- ================= CÓMO FUNCIONA ================= -->
+<section id="how">
+  <div class="wrap">
+    <h2 class="sec-title">Start in three steps
+      <span class="es">Empieza en tres pasos</span>
+    </h2>
     <div class="steps-row">
       <div class="step">
         <span class="num">1</span>
-        <p>Sign up free<span class="es">Regístrate gratis</span></p>
+        <div>
+          <h3>Get the app and create your account <span class="es">· Consigue la app y crea tu cuenta</span></h3>
+          <p>Free, from the button on this page — installed on your home screen in under a minute.
+            <span class="es">Gratis, desde el botón de esta página — instalada en tu pantalla de inicio en menos de un minuto.</span></p>
+        </div>
       </div>
       <div class="step">
         <span class="num">2</span>
-        <p>Your trainer builds your plan<span class="es">Tu entrenador arma tu plan</span></p>
+        <div>
+          <h3>Complete your evaluation <span class="es">· Completa tu evaluación</span></h3>
+          <p>Your goals are calculated with their scientific foundation, and your trainer sets up your plan.
+            <span class="es">Tus metas se calculan con su fundamento científico, y tu entrenador prepara tu plan.</span></p>
+        </div>
       </div>
       <div class="step">
         <span class="num">3</span>
-        <p>Log, train and progress<span class="es">Registra, entrena y progresa</span></p>
+        <div>
+          <h3>Train, eat and watch yourself advance <span class="es">· Entrena, come y mira cómo avanzas</span></h3>
+          <p>Guided sessions, your daily menu and your progress, day by day.
+            <span class="es">Sesiones guiadas, tu menú del día y tu progreso, día a día.</span></p>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="wellbeing">
-    <div class="wb-en">Well-being for body, mind and spirit</div>
-    <div class="wb-es">Bienestar físico, mental y espiritual</div>
-  </div>
-
-  <div class="signature">
-    <img src="foto-perfil-instagram.jpg" alt="Ronald Borges">
-    <div>
-      <div class="sig-name">Ronald Borges</div>
-      <div class="sig-role">CEO &amp; Creator <span class="es">· Fundador y creador</span></div>
-      <div class="sig-line">ISSA Certified Personal Trainer · Author of <i>“8 claves para vivir en el presente y ser felices”</i> · Memphis, TN</div>
-      <div class="sig-social">Follow along: <b>@ronaldborges590</b></div>
-    </div>
-  </div>
-
-  <!-- RONBO.FIT Business — puerta falsa (construcción 2026-10-30):
+<!-- ================= RONBO.FIT BUSINESS (conservada de la página anterior) ================= -->
+<section id="business-access">
+  <div class="wrap">
+<!-- RONBO.FIT Business — puerta falsa (construcción 2026-10-30):
        anuncia la línea de gimnasios que AÚN NO EXISTE y recoge el
        interés con un mini-formulario que el Worker convierte en UN
        aviso a ronbo.fit@gmail.com (POST /business-lead). Nada se
@@ -261,12 +335,37 @@
       <p class="biz-msg" id="biz-msg" role="status"></p>
     </form>
   </div>
+  </div>
+</section>
+
+<!-- ================= CIERRE ================= -->
+<div class="final">
+  <div class="wrap">
+    <h2>Your best week starts today
+      <span class="es">Tu mejor semana empieza hoy</span>
+    </h2>
+    <!-- Botón de descarga: ver la nota APP STORE BADGE en el CSS antes de tocarlo. -->
+    <a class="appstore" href="https://fit.ronbo.store" aria-label="Get the RONBO FIT app / Consigue la app de RONBO FIT">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span>
+        <span class="small">Get the app · Consigue la app</span>
+        <span class="big">RONBO FIT</span>
+      </span>
+    </a>
+    <p class="install-note">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b>.
+      <span class="es">En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b>.</span>
+    </p>
+  </div>
 </div>
 
+<!-- ================= PIE ================= -->
 <footer>
   <div class="wrap">
-    <div class="foot-brand">RONBO FIT</div>
-    <p>fit.ronbo.store · No medical advice; always consult your physician about your health. / Sin consejo médico; consulta siempre a tu médico sobre tu salud.</p>
+    <div class="foot-wm">RONBO.FIT</div>
+    <div class="foot-slogan">Eat well. Train strong. Live present. <span class="es">· Come bien. Entrena fuerte. Vive el presente.</span></div>
+    <p>Students &amp; trainers / Alumnos y entrenadores: <a href="mailto:ronbo.fit@gmail.com">ronbo.fit@gmail.com</a></p>
+    <p>© 2026 RONBO FIT · fit.ronbo.store<br>
+    No medical advice; always consult your physician about your health. / Sin consejo médico; consulta siempre a tu médico sobre tu salud.</p>
   </div>
 </footer>
 
