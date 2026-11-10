@@ -144,14 +144,25 @@
       b.classList.toggle('on', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
-    try { localStorage.setItem('ronbofit-lang', l); } catch (e) {}
   }
   document.querySelectorAll('[data-setlang]').forEach(function (b) {
-    b.addEventListener('click', function () { apply(b.getAttribute('data-setlang')); });
+    b.addEventListener('click', function () {
+      var l = b.getAttribute('data-setlang');
+      apply(l);
+      try { localStorage.setItem('ronbofit-lang', l); } catch (e) {}
+    });
   });
-  var saved = 'en';
-  try { saved = localStorage.getItem('ronbofit-lang') || 'en'; } catch (e) {}
-  if (saved === 'es') apply('es');
+  var saved = null;
+  try { saved = localStorage.getItem('ronbofit-lang'); } catch (e) {}
+  if (saved === 'es' || saved === 'en') {
+    if (saved === 'es') apply('es');
+  } else {
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < langs.length; i++) {
+      if (/^es([-_]|$)/i.test(langs[i] || '')) { apply('es'); break; }
+    }
+  }
 })();
 </script>
 </body>

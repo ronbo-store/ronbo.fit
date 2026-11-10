@@ -232,6 +232,29 @@
   footer p{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6}
   footer a{color:var(--brand-dark);font-weight:700;text-decoration:none}
 
+  /* ---------- IA, código de barras y planes (2026-11-10) ---------- */
+  .bphoto.top img{object-position:top center}
+  .soon{display:inline-block;background:#fef3c7;color:#92400e;border:1px solid #f59e0b;border-radius:999px;
+    padding:2px 10px;font-size:11.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;vertical-align:2px;margin-left:8px;white-space:nowrap}
+  .bcband{background:#fff;border:2px dashed var(--brand);border-radius:20px;padding:22px;display:flex;gap:22px;align-items:center;margin-top:26px;text-align:left}
+  .bcband .bcphoto{flex:0 0 300px;border-radius:14px;overflow:hidden;align-self:stretch}
+  .bcband .bcphoto img{width:100%;height:100%;object-fit:cover;display:block}
+  .bcband h3{font-size:21px;margin-bottom:8px}
+  .bcband p{color:var(--muted);font-size:15.5px}
+  .pcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 6px 18px rgba(31,64,34,.06);text-align:left}
+  .pcard.mid{border:2px solid var(--brand)}
+  .pcard h3{font-size:24px}
+  .pcard .ptag{color:var(--brand-d);font-weight:700;font-size:14.5px;margin:4px 0 12px}
+  .pcard ul{list-style:none}
+  .pcard li{padding:6px 0 6px 26px;position:relative;color:var(--muted);font-size:15px;border-top:1px dashed var(--line)}
+  .pcard li:first-child{border-top:none}
+  .pcard li::before{content:"✓";position:absolute;left:2px;color:var(--brand-d);font-weight:800}
+  .plans-note{text-align:center;color:var(--muted);max-width:760px;margin:22px auto 0;font-size:15px}
+  @media (max-width:759px){
+    .bcband{flex-direction:column;align-items:stretch}
+    .bcband .bcphoto{flex:none}
+  }
+
   @media (max-width:480px){
     .topbar .wm{font-size:18px}
     .topbar .mini-cta{font-size:12.5px;padding:8px 13px;white-space:nowrap}
@@ -414,6 +437,66 @@
   </div>
 </section>
 
+<!-- ================= INTELIGENCIA ARTIFICIAL ================= -->
+<section id="ai">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="aiTitle">AI that does the typing for you</h2>
+    <p class="sec-sub" data-i18n="aiSub">Six jobs the app does with artificial intelligence, explained plainly: you show it or say it, it does the writing — and nothing is ever saved until you confirm it.</p>
+
+    <div class="grid">
+      <div class="bcard">
+        <div class="bphoto"><img src="assets/card-meals.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altAiPhoto" alt="Photographing a plate of food with a phone so the AI can analyze it"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.4"/></svg></div>
+        <h3 data-i18n="ai1H">From a photo of your plate</h3>
+        <p data-i18n="ai1P">Snap your meal and the AI identifies the foods and estimates calories and macros. Because it is an estimate, you always review and adjust before it counts toward your day.</p>
+      </div>
+
+      <div class="bcard">
+        <div class="bphoto"><img src="assets/ai-voice.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altAiVoice" alt="Recording a voice message on a phone to dictate a meal"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg></div>
+        <h3 data-i18n="ai2H">From your voice</h3>
+        <p data-i18n="ai2P">No time to type? Dictate what you ate — “two eggs, rice and grilled chicken” — and the AI turns your words into a logged meal with its values, ready for your confirmation.</p>
+      </div>
+
+      <div class="bcard">
+        <div class="bphoto"><img src="assets/ai-text.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altAiText" alt="Typing a meal as a text message on a phone"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg></div>
+        <h3 data-i18n="ai3H">From a sentence you type</h3>
+        <p data-i18n="ai3P">Prefer writing? Type what you ate in plain words and the AI does the same job: it finds the foods, estimates the amounts and works out the numbers for you to check.</p>
+      </div>
+
+      <div class="bcard">
+        <div class="bphoto top"><img src="assets/screen-coach.webp" width="430" height="573" loading="lazy" data-i18n-alt="altCoach" alt="Real RONBO FIT virtual Coach screen: ask about your day out loud"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg></div>
+        <h3 data-i18n="ai4H">A Coach you can ask — meet Ronbo</h3>
+        <p data-i18n="ai4P">The mascot is a real chat: ask about your day, your week or your plan — by text or by voice — and it answers, even out loud. It only reads your data; it never changes anything on its own.</p>
+      </div>
+
+      <div class="bcard">
+        <div class="bphoto top"><img src="assets/screen-progress.webp" width="780" height="1060" loading="lazy" data-i18n-alt="altProg" alt="Real RONBO FIT My progress screen: body composition, training, food and recovery in four tiles"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8"/><path d="M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8"/><path d="M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16"/><path d="M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/><circle cx="12" cy="9" r="2.4"/><path d="M7 19c.6-2.6 2.6-4 5-4s4.4 1.4 5 4"/></svg></div>
+        <h3 data-i18n="ai5H">Your body, from your photos</h3>
+        <p data-i18n="ai5P">With your consent, the AI estimates your body type from your own progress photos and feeds your body-composition report — guidance to train smarter, never a medical measurement.</p>
+      </div>
+
+      <div class="bcard">
+        <div class="bphoto"><img src="assets/ai-report.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altAiReport" alt="Standing on a smart scale whose body-composition report the AI will read"></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5"/><path d="M10 15.5h5"/></svg></div>
+        <h3><span data-i18n="ai6H">Your scale's report, read for you</span><span class="soon" data-i18n="soonBadge">Coming soon</span></h3>
+        <p data-i18n="ai6P">Photograph the body-composition report from your smart-scale app and the AI reads its values straight into your record — no typing. You confirm every number before it is saved.</p>
+      </div>
+    </div>
+
+    <div class="bcband">
+      <div class="bcphoto"><img src="assets/ai-barcode.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altBarcode" alt="Scanning the barcode printed on a package with a phone"></div>
+      <div>
+        <h3 data-i18n="bcH">And one that needs no AI: the barcode scanner</h3>
+        <p data-i18n="bcP">A barcode already carries the manufacturer's exact data, printed on the package. The app reads the number and looks the product up in the official food databases — USDA FoodData Central and Open Food Facts — taking the label's real values instead of estimating them. No AI, no guesswork, and it works even with the AI features off. Live today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section id="how">
   <div class="wrap">
@@ -441,6 +524,58 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= PLANES ================= -->
+<section id="plans">
+  <div class="wrap">
+    <h2 class="sec-title"><span data-i18n="plansTitle">Plans</span><span class="soon" data-i18n="soonBadge">Coming soon</span></h2>
+    <p class="sec-sub" data-i18n="plansSub">In testing now: every plan feature is open and free for everyone — these plans switch on when billing opens.</p>
+
+    <div class="grid">
+      <div class="pcard">
+        <h3 data-i18n="plan1Name">Basic</h3>
+        <p class="ptag" data-i18n="plan1Tag">Everything essential — with AI where it counts</p>
+        <ul>
+          <li data-i18n="plan1L1">Science-based goals, personal training plans and the Automatic Program</li>
+          <li data-i18n="plan1L2">Weekly menu with an automatic shopping list</li>
+          <li data-i18n="plan1L3">Exercise library, full progress and body-composition report</li>
+          <li data-i18n="plan1L4">Barcode scanner included — it needs no AI</li>
+          <li data-i18n="plan1L5">AI meal analysis by photo, voice and text — included</li>
+          <li data-i18n="plan1L6">Virtual Coach and body analysis from your photos — included</li>
+          <li data-i18n="plan1L7">AI report import — included when it launches</li>
+          <li data-i18n="plan1L8">For trainers: coach up to 5 students</li>
+        </ul>
+      </div>
+
+      <div class="pcard mid">
+        <h3 data-i18n="plan2Name">Premium</h3>
+        <p class="ptag" data-i18n="plan2Tag">More AI, every day</p>
+        <ul>
+          <li data-i18n="plan2L1">Everything in Basic</li>
+          <li data-i18n="plan2L2">More AI analysis every day — meals, gym machines and reports</li>
+          <li data-i18n="plan2L3">More questions for your Virtual Coach, every day</li>
+          <li data-i18n="plan2L4">Body analysis from your photos, more often</li>
+          <li data-i18n="plan2L5">More report imports every month</li>
+          <li data-i18n="plan2L6">For trainers: coach up to 10 students</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <h3 data-i18n="plan3Name">Elite</h3>
+        <p class="ptag" data-i18n="plan3Tag">The most of everything</p>
+        <ul>
+          <li data-i18n="plan3L1">Everything in Premium</li>
+          <li data-i18n="plan3L2">The most AI analysis every day</li>
+          <li data-i18n="plan3L3">The most time with your Virtual Coach</li>
+          <li data-i18n="plan3L4">The highest report-import allowance</li>
+          <li data-i18n="plan3L5">For trainers: coach up to 30 students</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="plans-note" data-i18n="plansNote">While testing lasts, nothing above is limited: every feature is open and free for everyone, so we can gather real feedback. No prices yet — and nothing is charged during testing.</p>
   </div>
 </section>
 
@@ -566,10 +701,14 @@
 </script>
 
 <script>
-/* Selector de idioma EN | ES: la página nace en inglés y el diccionario
-   traduce todo al instante en el navegador. La elección se recuerda
-   (localStorage, misma clave en privacy.html). La sección Business es
-   bilingüe de origen y su formulario tiene su propio script: no se toca. */
+/* Selector de idioma EN | ES: el diccionario traduce todo al instante en
+   el navegador. Como en la app, la página NACE en el idioma del
+   dispositivo/navegador (navigator.languages): cualquier variante de
+   español abre en español; inglés o cualquier otro, en inglés. La
+   elección MANUAL en el selector manda sobre la detección y es la única
+   que se recuerda (localStorage, misma clave en privacy.html); el idioma
+   detectado NO se guarda. La sección Business es bilingüe de origen y su
+   formulario tiene su propio script: no se toca. */
 (function () {
   var META = {
     en: { t: "RONBO.FIT — Eat well. Train strong. Live present.",
@@ -640,7 +779,57 @@
     footPrivacy: "Privacidad",
     footStudents: "Alumnos y entrenadores: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
     footLegal: "Sin consejo médico; consulta siempre a tu médico sobre tu salud.",
-    footCredits: "Fotos de las tarjetas: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes y Annushka Ahuja vía Pexels (uso libre)."
+    footCredits: "Fotos de las tarjetas: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes y Annushka Ahuja vía Pexels (uso libre). Fotos de la sección de IA: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk y Kampus Production, vía Pexels.",
+    aiTitle: "La IA que escribe por ti",
+    aiSub: "Seis trabajos que la app hace con inteligencia artificial, explicados sin rodeos: tú lo muestras o lo dices, ella escribe — y nada se guarda jamás hasta que tú lo confirmas.",
+    ai1H: "Desde una foto de tu plato",
+    ai1P: "Fotografía tu comida y la IA identifica los alimentos y estima calorías y macros. Como es una estimación, tú siempre revisas y ajustas antes de que cuente en tu día.",
+    altAiPhoto: "Fotografiando un plato de comida con el teléfono para que la IA lo analice",
+    ai2H: "Desde tu voz",
+    ai2P: "¿Sin tiempo para teclear? Dicta lo que comiste — «dos huevos, arroz y pollo a la plancha» — y la IA convierte tus palabras en una comida registrada con sus valores, lista para tu confirmación.",
+    altAiVoice: "Grabando un mensaje de voz en el teléfono para dictar una comida",
+    ai3H: "Desde una frase que escribes",
+    ai3P: "¿Prefieres escribir? Escribe lo que comiste con palabras normales y la IA hace el mismo trabajo: encuentra los alimentos, estima las cantidades y calcula los números para que los revises.",
+    altAiText: "Escribiendo una comida como mensaje de texto en el teléfono",
+    ai4H: "Un Coach al que preguntarle: Ronbo",
+    ai4P: "La mascota es un chat de verdad: pregunta por tu día, tu semana o tu plan — por texto o por voz — y te responde, incluso en voz alta. Solo lee tus datos; nunca cambia nada por su cuenta.",
+    ai5H: "Tu cuerpo, desde tus fotos",
+    ai5P: "Con tu permiso, la IA estima tu tipo de cuerpo desde tus propias fotos de progreso y alimenta tu reporte de composición corporal: una orientación para entrenar mejor, nunca una medición médica.",
+    ai6H: "El reporte de tu báscula, sin teclear",
+    ai6P: "Fotografía el reporte de composición corporal de la app de tu báscula inteligente y la IA lee sus valores directo a tu registro, sin teclear. Tú confirmas cada número antes de guardarlo.",
+    altAiReport: "De pie sobre una báscula inteligente cuyo reporte de composición corporal leerá la IA",
+    soonBadge: "Próximamente",
+    bcH: "Y una que no necesita IA: el escáner de códigos de barras",
+    bcP: "Un código de barras ya trae el dato exacto del fabricante, impreso en el paquete. La app lee el número y busca el producto en las bases oficiales de alimentos — USDA FoodData Central y Open Food Facts — tomando los valores reales de la etiqueta en vez de estimarlos. Sin IA, sin adivinar, y funciona incluso con las funciones de IA apagadas. En vivo hoy.",
+    altBarcode: "Escaneando con el teléfono el código de barras impreso en un paquete",
+    plansTitle: "Planes",
+    plansSub: "Ahora en prueba: todas las funciones de los planes están abiertas y son gratis para todos — estos planes se activan cuando abra la facturación.",
+    plan1Name: "Básico",
+    plan1Tag: "Todo lo esencial, con IA donde cuenta",
+    plan1L1: "Metas con fundamento científico, planes de entrenamiento y el Programa Automático",
+    plan1L2: "Menú semanal con lista de compras automática",
+    plan1L3: "Biblioteca de ejercicios, progreso completo y reporte de composición corporal",
+    plan1L4: "Escáner de códigos de barras incluido: no necesita IA",
+    plan1L5: "Análisis de comidas con IA por foto, voz y texto: incluido",
+    plan1L6: "Coach Virtual y análisis corporal desde tus fotos: incluidos",
+    plan1L7: "Ingreso de reportes con IA: incluido cuando se lance",
+    plan1L8: "Para entrenadores: acompaña hasta 5 alumnos",
+    plan2Name: "Premium",
+    plan2Tag: "Más IA, todos los días",
+    plan2L1: "Todo lo del Básico",
+    plan2L2: "Más análisis con IA cada día: comidas, máquinas del gimnasio y reportes",
+    plan2L3: "Más preguntas para tu Coach Virtual, cada día",
+    plan2L4: "Análisis corporal desde tus fotos, más seguido",
+    plan2L5: "Más ingresos de reportes cada mes",
+    plan2L6: "Para entrenadores: acompaña hasta 10 alumnos",
+    plan3Name: "Élite",
+    plan3Tag: "Lo máximo de todo",
+    plan3L1: "Todo lo del Premium",
+    plan3L2: "La mayor cantidad de análisis con IA cada día",
+    plan3L3: "El mayor tiempo con tu Coach Virtual",
+    plan3L4: "El mayor cupo de ingreso de reportes",
+    plan3L5: "Para entrenadores: acompaña hasta 30 alumnos",
+    plansNote: "Mientras dure la prueba, nada de lo anterior está limitado: cada función está abierta y gratis para todos, para recoger opiniones reales. Aún no hay precios, y durante la prueba no se cobra nada."
   };
   var EN = {
     storeLink: "Store",
@@ -705,7 +894,57 @@
     footPrivacy: "Privacy",
     footStudents: "Students &amp; trainers: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
     footLegal: "No medical advice; always consult your physician about your health.",
-    footCredits: "Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use)."
+    footCredits: "Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use). AI section photos: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk and Kampus Production, via Pexels.",
+    aiTitle: "AI that does the typing for you",
+    aiSub: "Six jobs the app does with artificial intelligence, explained plainly: you show it or say it, it does the writing — and nothing is ever saved until you confirm it.",
+    ai1H: "From a photo of your plate",
+    ai1P: "Snap your meal and the AI identifies the foods and estimates calories and macros. Because it is an estimate, you always review and adjust before it counts toward your day.",
+    altAiPhoto: "Photographing a plate of food with a phone so the AI can analyze it",
+    ai2H: "From your voice",
+    ai2P: "No time to type? Dictate what you ate — “two eggs, rice and grilled chicken” — and the AI turns your words into a logged meal with its values, ready for your confirmation.",
+    altAiVoice: "Recording a voice message on a phone to dictate a meal",
+    ai3H: "From a sentence you type",
+    ai3P: "Prefer writing? Type what you ate in plain words and the AI does the same job: it finds the foods, estimates the amounts and works out the numbers for you to check.",
+    altAiText: "Typing a meal as a text message on a phone",
+    ai4H: "A Coach you can ask — meet Ronbo",
+    ai4P: "The mascot is a real chat: ask about your day, your week or your plan — by text or by voice — and it answers, even out loud. It only reads your data; it never changes anything on its own.",
+    ai5H: "Your body, from your photos",
+    ai5P: "With your consent, the AI estimates your body type from your own progress photos and feeds your body-composition report — guidance to train smarter, never a medical measurement.",
+    ai6H: "Your scale's report, read for you",
+    ai6P: "Photograph the body-composition report from your smart-scale app and the AI reads its values straight into your record — no typing. You confirm every number before it is saved.",
+    altAiReport: "Standing on a smart scale whose body-composition report the AI will read",
+    soonBadge: "Coming soon",
+    bcH: "And one that needs no AI: the barcode scanner",
+    bcP: "A barcode already carries the manufacturer's exact data, printed on the package. The app reads the number and looks the product up in the official food databases — USDA FoodData Central and Open Food Facts — taking the label's real values instead of estimating them. No AI, no guesswork, and it works even with the AI features off. Live today.",
+    altBarcode: "Scanning the barcode printed on a package with a phone",
+    plansTitle: "Plans",
+    plansSub: "In testing now: every plan feature is open and free for everyone — these plans switch on when billing opens.",
+    plan1Name: "Basic",
+    plan1Tag: "Everything essential — with AI where it counts",
+    plan1L1: "Science-based goals, personal training plans and the Automatic Program",
+    plan1L2: "Weekly menu with an automatic shopping list",
+    plan1L3: "Exercise library, full progress and body-composition report",
+    plan1L4: "Barcode scanner included — it needs no AI",
+    plan1L5: "AI meal analysis by photo, voice and text — included",
+    plan1L6: "Virtual Coach and body analysis from your photos — included",
+    plan1L7: "AI report import — included when it launches",
+    plan1L8: "For trainers: coach up to 5 students",
+    plan2Name: "Premium",
+    plan2Tag: "More AI, every day",
+    plan2L1: "Everything in Basic",
+    plan2L2: "More AI analysis every day — meals, gym machines and reports",
+    plan2L3: "More questions for your Virtual Coach, every day",
+    plan2L4: "Body analysis from your photos, more often",
+    plan2L5: "More report imports every month",
+    plan2L6: "For trainers: coach up to 10 students",
+    plan3Name: "Elite",
+    plan3Tag: "The most of everything",
+    plan3L1: "Everything in Premium",
+    plan3L2: "The most AI analysis every day",
+    plan3L3: "The most time with your Virtual Coach",
+    plan3L4: "The highest report-import allowance",
+    plan3L5: "For trainers: coach up to 30 students",
+    plansNote: "While testing lasts, nothing above is limited: every feature is open and free for everyone, so we can gather real feedback. No prices yet — and nothing is charged during testing."
   };
   var DICT = { en: EN, es: ES };
   function apply(l) {
@@ -732,14 +971,25 @@
       b.classList.toggle('on', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
-    try { localStorage.setItem('ronbofit-lang', l); } catch (e) {}
   }
   document.querySelectorAll('[data-setlang]').forEach(function (b) {
-    b.addEventListener('click', function () { apply(b.getAttribute('data-setlang')); });
+    b.addEventListener('click', function () {
+      var l = b.getAttribute('data-setlang');
+      apply(l);
+      try { localStorage.setItem('ronbofit-lang', l); } catch (e) {}
+    });
   });
-  var saved = 'en';
-  try { saved = localStorage.getItem('ronbofit-lang') || 'en'; } catch (e) {}
-  if (saved === 'es') apply('es');
+  var saved = null;
+  try { saved = localStorage.getItem('ronbofit-lang'); } catch (e) {}
+  if (saved === 'es' || saved === 'en') {
+    if (saved === 'es') apply('es');
+  } else {
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < langs.length; i++) {
+      if (/^es([-_]|$)/i.test(langs[i] || '')) { apply('es'); break; }
+    }
+  }
 })();
 </script>
 
