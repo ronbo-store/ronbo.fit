@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RONBO.FIT — Eat well. Train strong. Live present.</title>
-<meta name="description" content="RONBO FIT: evidence-based goals, personal training plans, weekly meal menus with an automatic shopping list, your progress in one place and a real trainer by your side. / Metas con fundamento científico, planes de entrenamiento personales, menú semanal de comidas con lista de compras automática, tu progreso en un solo lugar y un entrenador real a tu lado.">
+<meta name="description" content="RONBO FIT: evidence-based goals, personal training plans, a weekly meal menu with an automatic shopping list, your progress in one place and a real trainer by your side.">
 <link rel="canonical" href="https://ronbo.fit/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d9488">
@@ -12,20 +12,20 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="RONBO.FIT — Eat well. Train strong. Live present.">
-<meta property="og:description" content="Training and food, guided by science and a real coach — in one app. / Entrenamiento y alimentación, guiados por la ciencia y un entrenador real — en una sola app.">
+<meta property="og:description" content="Training and food, guided by science and a real coach — in one app.">
 <meta property="og:url" content="https://ronbo.fit/">
 <meta property="og:site_name" content="RONBO.FIT">
 <meta property="og:image" content="https://ronbo.fit/assets/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ronald Borges, founder and trainer of RONBO FIT, at the gym / Ronald Borges, fundador y entrenador de RONBO FIT, en el gimnasio">
+<meta property="og:image:alt" content="Ronald Borges, founder and trainer of RONBO FIT, at the gym">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RONBO.FIT — Eat well. Train strong. Live present.">
-<meta name="twitter:description" content="Training and food, guided by science and a real coach — in one app. / Entrenamiento y alimentación, guiados por la ciencia y un entrenador real — en una sola app.">
+<meta name="twitter:description" content="Training and food, guided by science and a real coach — in one app.">
 <meta name="twitter:image" content="https://ronbo.fit/assets/og-image.jpg">
-<meta name="twitter:image:alt" content="Ronald Borges, founder and trainer of RONBO FIT, at the gym / Ronald Borges, fundador y entrenador de RONBO FIT, en el gimnasio">
+<meta name="twitter:image:alt" content="Ronald Borges, founder and trainer of RONBO FIT, at the gym">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +63,7 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "Free during the testing period / Gratis durante el periodo de prueba"
+        "description": "Free during the testing period"
       }
     }
   ]
@@ -91,10 +91,15 @@
   .top-links{display:flex;align-items:center;gap:16px}
   .store-link{font-weight:700;font-size:14.5px;color:var(--brand-dark);text-decoration:none;white-space:nowrap}
 
+  /* ---------- Selector de idioma ---------- */
+  .lang-switch{display:flex;background:#e8efed;border-radius:999px;padding:3px;flex:0 0 auto}
+  .lang-btn{border:0;background:transparent;font:inherit;font-size:12.5px;font-weight:800;
+    color:var(--muted);padding:5px 11px;border-radius:999px;cursor:pointer;line-height:1.2}
+  .lang-btn.on{background:var(--brand);color:#fff}
+
   /* ---------- Insignia de periodo de prueba ---------- */
   .test-badge{display:inline-block;background:#fff7e0;border:1.5px solid #e3a008;color:#7a5200;
     font-size:13.5px;font-weight:800;border-radius:999px;padding:7px 14px;margin-top:22px;line-height:1.35}
-  .test-badge .es{color:#7a5200;font-weight:700}
 
   /* ---------- Pantallas reales ---------- */
   .shots{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
@@ -103,7 +108,6 @@
   .phone img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
   .phone figcaption{font-size:14px;line-height:1.5;color:#f2f6f5;font-weight:700;
     padding:13px 8px 7px;text-align:left}
-  .phone figcaption .es{display:block;font-size:13px;font-weight:500;color:#a9bcd0;margin-top:3px}
   figure.phone{background:#101623}
 
   /* ---------- Tu entrenador ---------- */
@@ -114,16 +118,13 @@
   .trainer .tsmall{width:104px;height:104px;object-fit:cover;border-radius:50%;
     border:4px solid var(--brand-soft);display:block}
   .trainer h3{font-size:20px;font-weight:800;line-height:1.3}
-  .trainer h3 .es{display:block;font-size:15.5px;font-weight:700;margin-top:3px}
   .trainer p{font-size:14.5px;line-height:1.55;margin-top:8px}
-  .trainer p .es{display:block;font-size:13.5px;margin-top:3px}
 
   /* ---------- Franja tienda ---------- */
   .store-band{max-width:760px;margin:0 auto;background:#101623;color:#fff;border-radius:18px;
     padding:24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
   .store-band h2{font-size:20px;font-weight:800;letter-spacing:.04em}
   .store-band p{font-size:14.5px;line-height:1.55;opacity:.92}
-  .store-band p .es{display:block;font-size:13.5px;opacity:.8;margin-top:3px;color:#fff}
   .store-btn{background:var(--brand);color:#fff;text-decoration:none;font-weight:800;font-size:15px;
     padding:12px 22px;border-radius:999px;white-space:nowrap}
 
@@ -134,9 +135,7 @@
     box-shadow:0 18px 40px rgba(11,122,110,.28);border:4px solid #fff}
   .hero-art img{width:100%;height:100%;object-fit:cover;display:block}
   .hero h1{font-size:37px;line-height:1.16;font-weight:800;letter-spacing:-.01em}
-  .hero h1 .es{display:block;font-size:20px;font-weight:700;margin-top:9px;line-height:1.3}
   .hero .what{font-size:16.5px;line-height:1.55;margin:16px auto 0;max-width:560px}
-  .hero .what .es{display:block;font-size:15px;margin-top:4px}
 
   /* ---------- Botón de descarga (insignia provisional) ---------- */
   /*
@@ -162,20 +161,18 @@
   /* ---------- Secciones ---------- */
   section{padding:42px 0 6px}
   .sec-title{text-align:center;font-size:26px;font-weight:800;line-height:1.25}
-  .sec-title .es{display:block;font-size:16.5px;font-weight:700;margin-top:5px}
   .sec-sub{text-align:center;font-size:15.5px;color:var(--muted);max-width:640px;margin:10px auto 0;line-height:1.55}
-  .sec-sub .es{display:block;font-size:14.5px;margin-top:3px}
 
   /* ---------- Bondades ---------- */
   .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px}
   .bcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+  .bcard .bphoto{margin:-20px -20px 14px;border-radius:18px 18px 0 0;overflow:hidden;aspect-ratio:16/10;background:#eef3f2}
+  .bcard .bphoto img{width:100%;height:100%;object-fit:cover;display:block}
   .bcard .ic{width:46px;height:46px;border-radius:13px;background:var(--brand-soft);
     display:flex;align-items:center;justify-content:center;color:var(--brand)}
   .bcard .ic svg{width:26px;height:26px}
   .bcard h3{font-size:17.5px;font-weight:800;margin-top:12px;line-height:1.3}
-  .bcard h3 .es{display:block;font-size:14.5px;font-weight:700;margin-top:2px}
   .bcard p{font-size:14.5px;line-height:1.55;margin-top:7px}
-  .bcard p .es{display:block;font-size:13.5px;margin-top:3px}
 
   .privacy{margin-top:14px;background:var(--brand-dark);color:#fff;border-radius:18px;
     padding:24px 22px;display:flex;gap:16px;align-items:flex-start}
@@ -183,9 +180,7 @@
     display:flex;align-items:center;justify-content:center}
   .privacy .ic svg{width:26px;height:26px}
   .privacy h3{font-size:17.5px;font-weight:800;line-height:1.3}
-  .privacy h3 .es{display:block;font-size:14.5px;font-weight:700;opacity:.85;margin-top:2px;color:#fff}
   .privacy p{font-size:14.5px;line-height:1.55;margin-top:7px}
-  .privacy p .es{display:block;font-size:13.5px;opacity:.85;margin-top:3px;color:#fff}
 
   /* ---------- Cómo funciona ---------- */
   .steps-row{display:flex;flex-direction:column;gap:12px;margin-top:24px}
@@ -194,9 +189,7 @@
   .step .num{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
     width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;font-size:16px}
   .step h3{font-size:16px;font-weight:800;line-height:1.3}
-  .step h3 .es{font-size:13.5px;font-weight:700}
   .step p{font-size:14px;line-height:1.5;margin-top:4px}
-  .step p .es{font-size:13px}
 
 
   /* ---------- RONBO.FIT Business (sección integrada 2026-11-09, conservada de la página anterior) ---------- */
@@ -229,7 +222,6 @@
   .final{margin:44px 0 0;background:var(--brand-soft);border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);padding:38px 0 42px;text-align:center}
   .final h2{font-size:25px;font-weight:800;line-height:1.3}
-  .final h2 .es{display:block;font-size:16.5px;font-weight:700;margin-top:5px}
   .final .appstore{margin-top:22px}
   .final .install-note{margin-left:auto;margin-right:auto}
 
@@ -237,16 +229,15 @@
   footer{padding:28px 0 34px;text-align:center}
   footer .foot-wm{font-size:19px;font-weight:800;letter-spacing:.06em;color:var(--brand)}
   footer .foot-slogan{font-size:14.5px;font-weight:600;margin-top:4px}
-  footer .foot-slogan .es{font-size:13px;font-weight:500}
   footer p{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6}
   footer a{color:var(--brand-dark);font-weight:700;text-decoration:none}
 
   @media (max-width:480px){
     .topbar .wm{font-size:18px}
     .topbar .mini-cta{font-size:12.5px;padding:8px 13px;white-space:nowrap}
-    .top-links{gap:10px}
+    .top-links{gap:9px}
     .store-link{font-size:12.5px}
-    .cta-es{display:none}
+    .lang-btn{font-size:11.5px;padding:4px 8px}
     .hero{padding:24px 0 6px}
     .hero-grid{gap:18px}
     .hero-art{width:176px;height:176px}
@@ -258,7 +249,6 @@
     .hero-grid{flex-direction:row;text-align:left;gap:44px}
     .hero-art{width:290px;height:290px;border-radius:42px}
     .hero h1{font-size:50px}
-    .hero h1 .es{font-size:25px}
     .hero .what{margin-left:0}
     .install-note{margin-left:0}
     .grid{grid-template-columns:1fr 1fr 1fr}
@@ -277,8 +267,12 @@
   <div class="wrap topbar-in">
     <div class="wm">RONBO.FIT</div>
     <nav class="top-links">
-      <a class="store-link" href="https://ronbo.store">Store · <span style="opacity:.75">Tienda</span></a>
-      <a class="mini-cta" href="https://fit.ronbo.store">Get the app · <span class="cta-es" style="opacity:.8">Consigue la app</span></a>
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" class="lang-btn on" data-setlang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-setlang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="store-link" href="https://ronbo.store" data-i18n="storeLink">Store</a>
+      <a class="mini-cta" href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a>
     </nav>
   </div>
 </div>
@@ -287,29 +281,23 @@
 <div class="hero">
   <div class="wrap hero-grid">
     <div class="hero-art">
-      <img src="assets/coach-mascot.webp" alt="Ronbo, the RONBO FIT virtual coach / Ronbo, el coach virtual de RONBO FIT" width="512" height="512">
+      <img src="assets/coach-mascot.webp" data-i18n-alt="mascotAlt" alt="Ronbo, the RONBO FIT virtual coach" width="512" height="512">
     </div>
     <div>
-      <h1>Eat well. Train strong. Live present.
-        <span class="es">Come bien. Entrena fuerte. Vive el presente.</span>
-      </h1>
-      <p class="what">RONBO FIT brings your training, your meals and your progress together in one app — guided by science and by a real coach who knows you.
-        <span class="es">RONBO FIT reúne tu entrenamiento, tus comidas y tu progreso en una sola app — guiados por la ciencia y por un entrenador real que te conoce.</span>
-      </p>
+      <h1 data-i18n="h1">Eat well. Train strong. Live present.</h1>
+      <p class="what" data-i18n="heroWhat">RONBO FIT brings your training, your meals and your progress together in one app — guided by science and by a real coach who knows you.</p>
 
       <!-- Botón de descarga: ver la nota APP STORE BADGE en el CSS antes de tocarlo. -->
-      <p class="test-badge">🧪 In testing · Free for now <span class="es">· En periodo de prueba · Gratis por ahora</span></p>
+      <p class="test-badge" data-i18n="testBadge">🧪 In testing · Free for now</p>
       <br>
-      <a class="appstore" href="https://fit.ronbo.store" aria-label="Get the RONBO FIT app / Consigue la app de RONBO FIT">
+      <a class="appstore" href="https://fit.ronbo.store" data-i18n-aria="appAria" aria-label="Get the RONBO FIT app">
         <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         <span>
-          <span class="small">Get the app · Consigue la app</span>
+          <span class="small" data-i18n="getApp">Get the app</span>
           <span class="big">RONBO FIT</span>
         </span>
       </a>
-      <p class="install-note">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b> — it installs like any other app, free during the testing period.
-        <span class="es">En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b> — se instala como cualquier otra app, gratis durante el periodo de prueba.</span>
-      </p>
+      <p class="install-note" data-i18n-html="install1">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b> — it installs like any other app, free during the testing period.</p>
     </div>
   </div>
 </div>
@@ -317,63 +305,58 @@
 <!-- ================= BONDADES ================= -->
 <section id="benefits">
   <div class="wrap">
-    <h2 class="sec-title">Everything works together for your goal
-      <span class="es">Todo trabaja junto por tu meta</span>
-    </h2>
-    <p class="sec-sub">No scattered apps, no guesswork: one plan that connects what you eat, how you train and how you advance.
-      <span class="es">Sin apps sueltas ni adivinanzas: un solo plan que conecta lo que comes, cómo entrenas y cómo avanzas.</span>
-    </p>
+    <h2 class="sec-title" data-i18n="benTitle">Everything works together for your goal</h2>
+    <p class="sec-sub" data-i18n="benSub">No scattered apps, no guesswork: one plan that connects what you eat, how you train and how you advance.</p>
 
     <div class="grid">
       <div class="bcard">
+        <div class="bphoto"><img src="assets/card-goals.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altGoals" alt="A member at the gym checking her phone and her goals"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
-        <h3>Goals with a scientific foundation <span class="es">Metas con fundamento científico</span></h3>
-        <p>Your calories, protein, carbs and fats are calculated from published sports-science research — and your health declaration adjusts them before anything is applied.
-          <span class="es">Tus calorías, proteína, carbohidratos y grasas se calculan desde investigaciones científicas publicadas — y tu declaración de salud los ajusta antes de aplicar nada.</span></p>
+        <h3 data-i18n="goalsH">Goals with a scientific foundation</h3>
+        <p data-i18n="goalsP">Your calories, protein, carbs and fats are calculated from published sports-science research — and your health declaration adjusts them before anything is applied.</p>
       </div>
 
       <div class="bcard">
+        <div class="bphoto"><img src="assets/card-training.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altPlan" alt="Training with dumbbells at the gym"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8v8"/><path d="M17 8v8"/><path d="M4.5 10v4"/><path d="M19.5 10v4"/><path d="M7 12h10"/></svg></div>
-        <h3>A training plan made for you <span class="es">Un plan de entrenamiento hecho para ti</span></h3>
-        <p>Your trainer builds your weekly plan, and the Automatic Program can propose the training split that fits your days — you always review it before it goes live.
-          <span class="es">Tu entrenador arma tu plan semanal, y el Programa Automático puede proponer la distribución que encaja con tus días — tú siempre lo revisas antes de activarlo.</span></p>
+        <h3 data-i18n="planH">A training plan made for you</h3>
+        <p data-i18n="planP">Your trainer builds your weekly plan, and the Automatic Program can propose the training split that fits your days — you always review it before it goes live.</p>
       </div>
 
       <div class="bcard">
+        <div class="bphoto"><img src="assets/card-menu.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altMenu" alt="Preparing fresh vegetables at home for the week's meals"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9c0-3 2-5 5.5-5.5C17.5 7.5 15.5 9.5 12 9Z"/><path d="M12 9c0-2.4-1.6-4-4.2-4.2C7.8 7.6 9.4 9 12 9Z"/><path d="M3 12h18"/><path d="M4.5 12a7.5 6 0 0 0 15 0"/><path d="M8.5 19.5h7"/></svg></div>
-        <h3>A weekly menu that plans itself <span class="es">Un menú semanal que se planifica solo</span></h3>
-        <p>Concrete dishes for every meal and every day, matched to your goals, with one-tap swaps that respect your allergies — and your shopping list builds itself.
-          <span class="es">Platos concretos para cada comida y cada día, ajustados a tus metas, con cambios en un toque que respetan tus alergias — y tu lista de compras se arma sola.</span></p>
+        <h3 data-i18n="menuH">A weekly menu that plans itself</h3>
+        <p data-i18n="menuP">Concrete dishes for every meal and every day, matched to your goals, with one-tap swaps that respect your allergies — and your shopping list builds itself.</p>
       </div>
 
       <div class="bcard">
+        <div class="bphoto"><img src="assets/card-meals.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altMeals" alt="Photographing a plate of food with a phone to analyze it"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.4L12 15l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div>
-        <h3>Meals analyzed in seconds <span class="es">Comidas analizadas en segundos</span></h3>
-        <p>Snap a photo of your plate or dictate what you ate: the Coach estimates calories and macros, flags the labels behind the numbers and keeps your day on track.
-          <span class="es">Toma una foto de tu plato o dicta lo que comiste: el Coach estima calorías y macros, explica el fundamento de los números y mantiene tu día en ruta.</span></p>
+        <h3 data-i18n="mealsH">Meals analyzed in seconds</h3>
+        <p data-i18n="mealsP">Snap a photo of your plate or dictate what you ate: the Coach estimates calories and macros, flags the labels behind the numbers and keeps your day on track.</p>
       </div>
 
       <div class="bcard">
+        <div class="bphoto"><img src="assets/card-progress.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altProgress" alt="Measuring her waist to track her progress"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12"/><path d="M9.5 20V8.5"/><path d="M15 20v-6"/><path d="M20 20V5"/><path d="M4 7.5 10 4l4 2.8L19.5 3.5"/></svg></div>
-        <h3>Your progress, all in one place <span class="es">Tu progreso, todo en un solo lugar</span></h3>
-        <p>Weight, measurements, progress photos, water, streaks and badges — your whole journey at a glance, with a shareable card when you hit a milestone.
-          <span class="es">Peso, medidas, fotos de progreso, agua, rachas y logros — todo tu camino de un vistazo, con una tarjeta para compartir cuando alcanzas una meta.</span></p>
+        <h3 data-i18n="progressH">Your progress, all in one place</h3>
+        <p data-i18n="progressP">Weight, measurements, progress photos, water, streaks and badges — your whole journey at a glance, with a shareable card when you hit a milestone.</p>
       </div>
 
       <div class="bcard">
+        <div class="bphoto"><img src="assets/ronald-trainer.webp" width="941" height="1254" loading="lazy" data-i18n-alt="altCoachCard" alt="Ronald Borges, founder and trainer of RONBO FIT, at the gym"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg></div>
-        <h3>A coach and a trainer by your side <span class="es">Un coach y un entrenador a tu lado</span></h3>
-        <p>The virtual Coach answers your questions any time, and your real trainer follows your plan and your progress with you — you never train alone.
-          <span class="es">El Coach virtual responde tus preguntas en cualquier momento, y tu entrenador real sigue tu plan y tu progreso contigo — nunca entrenas solo.</span></p>
+        <h3 data-i18n="coachH">A coach and a trainer by your side</h3>
+        <p data-i18n="coachP">The virtual Coach answers your questions any time, and your real trainer follows your plan and your progress with you — you never train alone.</p>
       </div>
     </div>
 
     <div class="privacy">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><circle cx="12" cy="15.2" r="1.4" fill="#fff"/></svg></div>
       <div>
-        <h3>Privacy first: your data is yours <span class="es">Privacidad primero: tus datos son tuyos</span></h3>
-        <p>A visible privacy seal inside the app, and nothing about your well-being is shared without your permission — your trainer sees your training, not your private health declarations.
-          <span class="es">Un sello de privacidad visible dentro de la app, y nada de tu bienestar se comparte sin tu permiso — tu entrenador ve tu entrenamiento, no tus declaraciones privadas de salud.</span></p>
+        <h3 data-i18n="privacyH">Privacy first: your data is yours</h3>
+        <p data-i18n="privacyP">A visible privacy seal inside the app, and nothing about your well-being is shared without your permission — your trainer sees your training, not your private health declarations.</p>
       </div>
     </div>
   </div>
@@ -382,63 +365,50 @@
 <!-- ================= PANTALLAS REALES ================= -->
 <section id="real-app">
   <div class="wrap">
-    <h2 class="sec-title">The real app, in your hands
-      <span class="es">La app de verdad, en tus manos</span>
-    </h2>
-    <p class="sec-sub">No drawings, no mock-ups: these are real screens from the app our students already train with today.
-      <span class="es">Sin dibujos ni maquetas: son pantallas reales de la app con la que nuestros alumnos ya entrenan hoy.</span>
-    </p>
+    <h2 class="sec-title" data-i18n="realTitle">The real app, in your hands</h2>
+    <p class="sec-sub" data-i18n="realSub">No drawings, no mock-ups: these are real screens from the app our students already train with today.</p>
 
     <div class="shots">
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-training.webp" width="540" height="724" loading="lazy" alt="Real RONBO FIT training session: barbell bench press and pec deck with last-time results / Sesión real de entrenamiento en RONBO FIT: press de banca con barra y mariposa en máquina, con los resultados de la última vez"></div>
-        <figcaption>Training, set by set — your session, your last time, your extras.
-          <span class="es">Entrenamiento, serie a serie — tu sesión, tu última vez, tus extras.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-training.webp" width="780" height="1040" loading="lazy" data-i18n-alt="altTrain" alt="Real RONBO FIT training session: today's workout with its exercises, sets and last-time results"></div>
+        <figcaption data-i18n="capTrain">Training, set by set — your session, your last time, your extras.</figcaption>
       </figure>
 
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-food.webp" width="540" height="720" loading="lazy" alt="Real RONBO FIT meal screen: splitting one plate between lunch and dinner / Pantalla real de comidas en RONBO FIT: repartir un plato entre el almuerzo y la cena"></div>
-        <figcaption>Meals that fit your day — split one plate between lunch and dinner in a single tap.
-          <span class="es">Comidas que encajan con tu día — reparte un plato entre el almuerzo y la cena con un solo toque.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-food.webp" width="390" height="520" loading="lazy" data-i18n-alt="altFood" alt="Real RONBO FIT meal screen: splitting one plate between lunch and dinner"></div>
+        <figcaption data-i18n="capFood">Meals that fit your day — split one plate between lunch and dinner in a single tap.</figcaption>
       </figure>
 
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-progress.webp" width="540" height="785" loading="lazy" alt="Real RONBO FIT My progress screen: body composition, training, food and recovery in four tiles / Pantalla real de Mi progreso en RONBO FIT: composición corporal, entrenamiento, comida y recuperación en cuatro baldosas"></div>
-        <figcaption>Your progress, all in one place — body, training, food and recovery.
-          <span class="es">Tu progreso, todo en un solo lugar — cuerpo, entrenamiento, comida y recuperación.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-progress.webp" width="780" height="1060" loading="lazy" data-i18n-alt="altProg" alt="Real RONBO FIT My progress screen: body composition, training, food and recovery in four tiles"></div>
+        <figcaption data-i18n="capProg">Your progress, all in one place — body, training, food and recovery.</figcaption>
       </figure>
 
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-coach.webp" width="540" height="720" loading="lazy" alt="Real RONBO FIT virtual Coach screen: ask about your day out loud / Pantalla real del Coach virtual de RONBO FIT: pregunta por tu día en voz alta"></div>
-        <figcaption>A virtual Coach that listens — ask about your day out loud.
-          <span class="es">Un Coach virtual que te escucha — pregunta por tu día en voz alta.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-coach.webp" width="430" height="573" loading="lazy" data-i18n-alt="altCoach" alt="Real RONBO FIT virtual Coach screen: ask about your day out loud"></div>
+        <figcaption data-i18n="capCoach">A virtual Coach that listens — ask about your day out loud.</figcaption>
       </figure>
 
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-library.webp" width="540" height="720" loading="lazy" alt="Real RONBO FIT exercise library: chest and back exercises with photos and levels / Biblioteca real de ejercicios de RONBO FIT: ejercicios de pecho y espalda con foto y nivel"></div>
-        <figcaption>A real exercise library — every move with its photo and its level.
-          <span class="es">Una biblioteca real de ejercicios — cada movimiento con su foto y su nivel.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-library.webp" width="720" height="960" loading="lazy" data-i18n-alt="altLib" alt="Real RONBO FIT exercise library: chest and back exercises with photos and levels"></div>
+        <figcaption data-i18n="capLib">A real exercise library — every move with its photo and its level.</figcaption>
       </figure>
 
       <figure class="phone">
-        <div class="pframe"><img src="assets/screen-start.webp" width="540" height="720" loading="lazy" alt="Real RONBO FIT sign-in screen with the slogan Eat well. Train strong. Live present. / Pantalla real de acceso a RONBO FIT con el eslogan Come bien. Entrena fuerte. Vive el presente."></div>
-        <figcaption>It all starts here — your account in under a minute.
-          <span class="es">Todo empieza aquí — tu cuenta en menos de un minuto.</span></figcaption>
+        <div class="pframe"><img src="assets/screen-start.webp" width="759" height="1012" loading="lazy" data-i18n-alt="altStart" alt="Real RONBO FIT sign-in screen with the slogan Eat well. Train strong. Live present."></div>
+        <figcaption data-i18n="capStart">It all starts here — your account in under a minute.</figcaption>
       </figure>
     </div>
 
     <!-- ================= TU ENTRENADOR ================= -->
     <div class="trainer">
       <div class="tphotos">
-        <img class="tmain" src="assets/ronald-trainer.webp" width="620" height="826" loading="lazy" alt="Ronald Borges, founder and trainer of RONBO FIT, at the gym / Ronald Borges, fundador y entrenador de RONBO FIT, en el gimnasio">
-        <img class="tsmall" src="assets/ronald-gym.webp" width="360" height="360" loading="lazy" alt="Ronald Borges training at the gym / Ronald Borges entrenando en el gimnasio">
+        <img class="tmain" src="assets/ronald-trainer.webp" width="941" height="1254" loading="lazy" data-i18n-alt="altCoachCard" alt="Ronald Borges, founder and trainer of RONBO FIT, at the gym">
+        <img class="tsmall" src="assets/ronald-gym.webp" width="360" height="360" loading="lazy" data-i18n-alt="altTrainerSmall" alt="Ronald Borges training at the gym">
       </div>
       <div>
-        <h3>Your trainer is a real person
-          <span class="es">Tu entrenador es una persona real</span>
-        </h3>
-        <p>RONBO FIT was built — and is coached — by <b>Ronald Borges</b>, ISSA Certified Personal Trainer: the same person training in these photos, building your plan and following your progress with you.
-          <span class="es">RONBO FIT fue creada — y la entrena — <b>Ronald Borges</b>, entrenador personal certificado por ISSA: la misma persona que entrena en estas fotos, arma tu plan y sigue tu progreso contigo.</span></p>
+        <h3 data-i18n="trainerH">Your trainer is a real person</h3>
+        <p data-i18n-html="trainerP">RONBO FIT was built — and is coached — by <b>Ronald Borges</b>, ISSA Certified Personal Trainer: the same person training in these photos, building your plan and following your progress with you.</p>
       </div>
     </div>
   </div>
@@ -447,32 +417,27 @@
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section id="how">
   <div class="wrap">
-    <h2 class="sec-title">Start in three steps
-      <span class="es">Empieza en tres pasos</span>
-    </h2>
+    <h2 class="sec-title" data-i18n="howTitle">Start in three steps</h2>
     <div class="steps-row">
       <div class="step">
         <span class="num">1</span>
         <div>
-          <h3>Get the app and create your account <span class="es">· Consigue la app y crea tu cuenta</span></h3>
-          <p>Free, from the button on this page — installed on your home screen in under a minute.
-            <span class="es">Gratis, desde el botón de esta página — instalada en tu pantalla de inicio en menos de un minuto.</span></p>
+          <h3 data-i18n="step1H">Get the app and create your account</h3>
+          <p data-i18n="step1P">Free, from the button on this page — installed on your home screen in under a minute.</p>
         </div>
       </div>
       <div class="step">
         <span class="num">2</span>
         <div>
-          <h3>Complete your evaluation <span class="es">· Completa tu evaluación</span></h3>
-          <p>Your goals are calculated with their scientific foundation, and your trainer sets up your plan.
-            <span class="es">Tus metas se calculan con su fundamento científico, y tu entrenador prepara tu plan.</span></p>
+          <h3 data-i18n="step2H">Complete your evaluation</h3>
+          <p data-i18n="step2P">Your goals are calculated with their scientific foundation, and your trainer sets up your plan.</p>
         </div>
       </div>
       <div class="step">
         <span class="num">3</span>
         <div>
-          <h3>Train, eat and watch yourself advance <span class="es">· Entrena, come y mira cómo avanzas</span></h3>
-          <p>Guided sessions, your daily menu and your progress, day by day.
-            <span class="es">Sesiones guiadas, tu menú del día y tu progreso, día a día.</span></p>
+          <h3 data-i18n="step3H">Train, eat and watch yourself advance</h3>
+          <p data-i18n="step3P">Guided sessions, your daily menu and your progress, day by day.</p>
         </div>
       </div>
     </div>
@@ -485,10 +450,9 @@
     <div class="store-band">
       <div>
         <h2>RONBO Store</h2>
-        <p>Gear and goods for your training and your wellbeing, from the same house as the app.
-          <span class="es">Equipo y productos para tu entrenamiento y tu bienestar, de la misma casa que la app.</span></p>
+        <p data-i18n="storeP">Gear and goods for your training and your wellbeing, from the same house as the app.</p>
       </div>
-      <a class="store-btn" href="https://ronbo.store">Visit the store · Visita la tienda</a>
+      <a class="store-btn" href="https://ronbo.store" data-i18n="storeBtn">Visit the store</a>
     </div>
   </div>
 </section>
@@ -533,22 +497,18 @@
 <!-- ================= CIERRE ================= -->
 <div class="final">
   <div class="wrap">
-    <h2>Your best week starts today
-      <span class="es">Tu mejor semana empieza hoy</span>
-    </h2>
+    <h2 data-i18n="finalH">Your best week starts today</h2>
     <!-- Botón de descarga: ver la nota APP STORE BADGE en el CSS antes de tocarlo. -->
-    <p class="test-badge">🧪 In testing · Free for now <span class="es">· En periodo de prueba · Gratis por ahora</span></p>
+    <p class="test-badge" data-i18n="testBadge">🧪 In testing · Free for now</p>
     <br>
-    <a class="appstore" href="https://fit.ronbo.store" aria-label="Get the RONBO FIT app / Consigue la app de RONBO FIT">
+    <a class="appstore" href="https://fit.ronbo.store" data-i18n-aria="appAria" aria-label="Get the RONBO FIT app">
       <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
       <span>
-        <span class="small">Get the app · Consigue la app</span>
+        <span class="small" data-i18n="getApp">Get the app</span>
         <span class="big">RONBO FIT</span>
       </span>
     </a>
-    <p class="install-note">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b>.
-      <span class="es">En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b>.</span>
-    </p>
+    <p class="install-note" data-i18n-html="install2">On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b>.</p>
   </div>
 </div>
 
@@ -556,11 +516,12 @@
 <footer>
   <div class="wrap">
     <div class="foot-wm">RONBO.FIT</div>
-    <div class="foot-slogan">Eat well. Train strong. Live present. <span class="es">· Come bien. Entrena fuerte. Vive el presente.</span></div>
-    <p><a href="https://ronbo.store">Store · Tienda</a> · <a href="privacy.html">Privacy · Privacidad</a> · <a href="https://fit.ronbo.store">Get the app · Consigue la app</a></p>
-    <p>Students &amp; trainers / Alumnos y entrenadores: <a href="mailto:ronbo.fit@gmail.com">ronbo.fit@gmail.com</a></p>
+    <div class="foot-slogan" data-i18n="footSlogan">Eat well. Train strong. Live present.</div>
+    <p><a href="https://ronbo.store" data-i18n="storeLink">Store</a> · <a href="privacy.html" data-i18n="footPrivacy">Privacy</a> · <a href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a></p>
+    <p data-i18n-html="footStudents">Students &amp; trainers: <a href="mailto:ronbo.fit@gmail.com">ronbo.fit@gmail.com</a></p>
     <p>© 2026 RONBO FIT · fit.ronbo.store<br>
-    No medical advice; always consult your physician about your health. / Sin consejo médico; consulta siempre a tu médico sobre tu salud.</p>
+    <span data-i18n="footLegal">No medical advice; always consult your physician about your health.</span></p>
+    <p data-i18n="footCredits">Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use).</p>
   </div>
 </footer>
 
@@ -601,6 +562,184 @@
       say('Something went wrong and nothing was sent — what you typed is still here. Please try again. · Algo falló y no se envió nada — lo que escribiste sigue aquí. Inténtalo de nuevo.', 'err');
     });
   });
+})();
+</script>
+
+<script>
+/* Selector de idioma EN | ES: la página nace en inglés y el diccionario
+   traduce todo al instante en el navegador. La elección se recuerda
+   (localStorage, misma clave en privacy.html). La sección Business es
+   bilingüe de origen y su formulario tiene su propio script: no se toca. */
+(function () {
+  var META = {
+    en: { t: "RONBO.FIT — Eat well. Train strong. Live present.",
+          d: "RONBO FIT: evidence-based goals, personal training plans, a weekly meal menu with an automatic shopping list, your progress in one place and a real trainer by your side." },
+    es: { t: "RONBO.FIT — Come bien. Entrena fuerte. Vive el presente.",
+          d: "RONBO FIT: metas con fundamento científico, planes de entrenamiento personales, menú semanal de comidas con lista de compras automática, tu progreso en un solo lugar y un entrenador real a tu lado." }
+  };
+  var ES = {
+    storeLink: "Tienda",
+    getApp: "Consigue la app",
+    mascotAlt: "Ronbo, el coach virtual de RONBO FIT",
+    h1: "Come bien. Entrena fuerte. Vive el presente.",
+    heroWhat: "RONBO FIT reúne tu entrenamiento, tus comidas y tu progreso en una sola app — guiados por la ciencia y por un entrenador real que te conoce.",
+    testBadge: "🧪 En periodo de prueba · Gratis por ahora",
+    appAria: "Consigue la app de RONBO FIT",
+    install1: "En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b> — se instala como cualquier otra app, gratis durante el periodo de prueba.",
+    install2: "En iPhone: abre la app, toca <b>Compartir</b> y luego <b>«Añadir a pantalla de inicio»</b>.",
+    benTitle: "Todo trabaja junto por tu meta",
+    benSub: "Sin apps sueltas ni adivinanzas: un solo plan que conecta lo que comes, cómo entrenas y cómo avanzas.",
+    goalsH: "Metas con fundamento científico",
+    goalsP: "Tus calorías, proteína, carbohidratos y grasas se calculan desde investigaciones científicas publicadas — y tu declaración de salud los ajusta antes de aplicar nada.",
+    altGoals: "Una alumna en el gimnasio mirando su teléfono y sus metas",
+    planH: "Un plan de entrenamiento hecho para ti",
+    planP: "Tu entrenador arma tu plan semanal, y el Programa Automático puede proponer la distribución que encaja con tus días — tú siempre lo revisas antes de activarlo.",
+    altPlan: "Entrenando con mancuernas en el gimnasio",
+    menuH: "Un menú semanal que se planifica solo",
+    menuP: "Platos concretos para cada comida y cada día, ajustados a tus metas, con cambios en un toque que respetan tus alergias — y tu lista de compras se arma sola.",
+    altMenu: "Preparando verduras frescas en casa para las comidas de la semana",
+    mealsH: "Comidas analizadas en segundos",
+    mealsP: "Toma una foto de tu plato o dicta lo que comiste: el Coach estima calorías y macros, explica el fundamento de los números y mantiene tu día en ruta.",
+    altMeals: "Fotografiando un plato de comida con el teléfono para analizarlo",
+    progressH: "Tu progreso, todo en un solo lugar",
+    progressP: "Peso, medidas, fotos de progreso, agua, rachas y logros — todo tu camino de un vistazo, con una tarjeta para compartir cuando alcanzas una meta.",
+    altProgress: "Midiéndose la cintura para seguir su progreso",
+    coachH: "Un coach y un entrenador a tu lado",
+    coachP: "El Coach virtual responde tus preguntas en cualquier momento, y tu entrenador real sigue tu plan y tu progreso contigo — nunca entrenas solo.",
+    altCoachCard: "Ronald Borges, fundador y entrenador de RONBO FIT, en el gimnasio",
+    privacyH: "Privacidad primero: tus datos son tuyos",
+    privacyP: "Un sello de privacidad visible dentro de la app, y nada de tu bienestar se comparte sin tu permiso — tu entrenador ve tu entrenamiento, no tus declaraciones privadas de salud.",
+    realTitle: "La app de verdad, en tus manos",
+    realSub: "Sin dibujos ni maquetas: son pantallas reales de la app con la que nuestros alumnos ya entrenan hoy.",
+    capTrain: "Entrenamiento, serie a serie — tu sesión, tu última vez, tus extras.",
+    altTrain: "Sesión real de entrenamiento en RONBO FIT: el entrenamiento de hoy con sus ejercicios, series y resultados de la última vez",
+    capFood: "Comidas que encajan con tu día — reparte un plato entre el almuerzo y la cena con un solo toque.",
+    altFood: "Pantalla real de comidas en RONBO FIT: repartir un plato entre el almuerzo y la cena",
+    capProg: "Tu progreso, todo en un solo lugar — cuerpo, entrenamiento, comida y recuperación.",
+    altProg: "Pantalla real de Mi progreso en RONBO FIT: composición corporal, entrenamiento, comida y recuperación en cuatro baldosas",
+    capCoach: "Un Coach virtual que te escucha — pregunta por tu día en voz alta.",
+    altCoach: "Pantalla real del Coach virtual de RONBO FIT: pregunta por tu día en voz alta",
+    capLib: "Una biblioteca real de ejercicios — cada movimiento con su foto y su nivel.",
+    altLib: "Biblioteca real de ejercicios de RONBO FIT: ejercicios de pecho y espalda con foto y nivel",
+    capStart: "Todo empieza aquí — tu cuenta en menos de un minuto.",
+    altStart: "Pantalla real de acceso a RONBO FIT con el eslogan Come bien. Entrena fuerte. Vive el presente.",
+    trainerH: "Tu entrenador es una persona real",
+    trainerP: "RONBO FIT fue creada — y la entrena — <b>Ronald Borges</b>, entrenador personal certificado por ISSA: la misma persona que entrena en estas fotos, arma tu plan y sigue tu progreso contigo.",
+    altTrainerSmall: "Ronald Borges entrenando en el gimnasio",
+    howTitle: "Empieza en tres pasos",
+    step1H: "Consigue la app y crea tu cuenta",
+    step1P: "Gratis, desde el botón de esta página — instalada en tu pantalla de inicio en menos de un minuto.",
+    step2H: "Completa tu evaluación",
+    step2P: "Tus metas se calculan con su fundamento científico, y tu entrenador prepara tu plan.",
+    step3H: "Entrena, come y mira cómo avanzas",
+    step3P: "Sesiones guiadas, tu menú del día y tu progreso, día a día.",
+    storeP: "Equipo y productos para tu entrenamiento y tu bienestar, de la misma casa que la app.",
+    storeBtn: "Visita la tienda",
+    finalH: "Tu mejor semana empieza hoy",
+    footSlogan: "Come bien. Entrena fuerte. Vive el presente.",
+    footPrivacy: "Privacidad",
+    footStudents: "Alumnos y entrenadores: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
+    footLegal: "Sin consejo médico; consulta siempre a tu médico sobre tu salud.",
+    footCredits: "Fotos de las tarjetas: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes y Annushka Ahuja vía Pexels (uso libre)."
+  };
+  var EN = {
+    storeLink: "Store",
+    getApp: "Get the app",
+    mascotAlt: "Ronbo, the RONBO FIT virtual coach",
+    h1: "Eat well. Train strong. Live present.",
+    heroWhat: "RONBO FIT brings your training, your meals and your progress together in one app — guided by science and by a real coach who knows you.",
+    testBadge: "🧪 In testing · Free for now",
+    appAria: "Get the RONBO FIT app",
+    install1: "On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b> — it installs like any other app, free during the testing period.",
+    install2: "On iPhone: open the app, tap <b>Share</b>, then <b>“Add to Home Screen”</b>.",
+    benTitle: "Everything works together for your goal",
+    benSub: "No scattered apps, no guesswork: one plan that connects what you eat, how you train and how you advance.",
+    goalsH: "Goals with a scientific foundation",
+    goalsP: "Your calories, protein, carbs and fats are calculated from published sports-science research — and your health declaration adjusts them before anything is applied.",
+    altGoals: "A member at the gym checking her phone and her goals",
+    planH: "A training plan made for you",
+    planP: "Your trainer builds your weekly plan, and the Automatic Program can propose the training split that fits your days — you always review it before it goes live.",
+    altPlan: "Training with dumbbells at the gym",
+    menuH: "A weekly menu that plans itself",
+    menuP: "Concrete dishes for every meal and every day, matched to your goals, with one-tap swaps that respect your allergies — and your shopping list builds itself.",
+    altMenu: "Preparing fresh vegetables at home for the week's meals",
+    mealsH: "Meals analyzed in seconds",
+    mealsP: "Snap a photo of your plate or dictate what you ate: the Coach estimates calories and macros, flags the labels behind the numbers and keeps your day on track.",
+    altMeals: "Photographing a plate of food with a phone to analyze it",
+    progressH: "Your progress, all in one place",
+    progressP: "Weight, measurements, progress photos, water, streaks and badges — your whole journey at a glance, with a shareable card when you hit a milestone.",
+    altProgress: "Measuring her waist to track her progress",
+    coachH: "A coach and a trainer by your side",
+    coachP: "The virtual Coach answers your questions any time, and your real trainer follows your plan and your progress with you — you never train alone.",
+    altCoachCard: "Ronald Borges, founder and trainer of RONBO FIT, at the gym",
+    privacyH: "Privacy first: your data is yours",
+    privacyP: "A visible privacy seal inside the app, and nothing about your well-being is shared without your permission — your trainer sees your training, not your private health declarations.",
+    realTitle: "The real app, in your hands",
+    realSub: "No drawings, no mock-ups: these are real screens from the app our students already train with today.",
+    capTrain: "Training, set by set — your session, your last time, your extras.",
+    altTrain: "Real RONBO FIT training session: today's workout with its exercises, sets and last-time results",
+    capFood: "Meals that fit your day — split one plate between lunch and dinner in a single tap.",
+    altFood: "Real RONBO FIT meal screen: splitting one plate between lunch and dinner",
+    capProg: "Your progress, all in one place — body, training, food and recovery.",
+    altProg: "Real RONBO FIT My progress screen: body composition, training, food and recovery in four tiles",
+    capCoach: "A virtual Coach that listens — ask about your day out loud.",
+    altCoach: "Real RONBO FIT virtual Coach screen: ask about your day out loud",
+    capLib: "A real exercise library — every move with its photo and its level.",
+    altLib: "Real RONBO FIT exercise library: chest and back exercises with photos and levels",
+    capStart: "It all starts here — your account in under a minute.",
+    altStart: "Real RONBO FIT sign-in screen with the slogan Eat well. Train strong. Live present.",
+    trainerH: "Your trainer is a real person",
+    trainerP: "RONBO FIT was built — and is coached — by <b>Ronald Borges</b>, ISSA Certified Personal Trainer: the same person training in these photos, building your plan and following your progress with you.",
+    altTrainerSmall: "Ronald Borges training at the gym",
+    howTitle: "Start in three steps",
+    step1H: "Get the app and create your account",
+    step1P: "Free, from the button on this page — installed on your home screen in under a minute.",
+    step2H: "Complete your evaluation",
+    step2P: "Your goals are calculated with their scientific foundation, and your trainer sets up your plan.",
+    step3H: "Train, eat and watch yourself advance",
+    step3P: "Guided sessions, your daily menu and your progress, day by day.",
+    storeP: "Gear and goods for your training and your wellbeing, from the same house as the app.",
+    storeBtn: "Visit the store",
+    finalH: "Your best week starts today",
+    footSlogan: "Eat well. Train strong. Live present.",
+    footPrivacy: "Privacy",
+    footStudents: "Students &amp; trainers: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
+    footLegal: "No medical advice; always consult your physician about your health.",
+    footCredits: "Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use)."
+  };
+  var DICT = { en: EN, es: ES };
+  function apply(l) {
+    if (!DICT[l]) l = 'en';
+    var d = DICT[l];
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n'); if (d[k] != null) el.textContent = d[k];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-html'); if (d[k] != null) el.innerHTML = d[k];
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-alt'); if (d[k] != null) el.setAttribute('alt', d[k]);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria'); if (d[k] != null) el.setAttribute('aria-label', d[k]);
+    });
+    document.documentElement.setAttribute('lang', l);
+    document.title = META[l].t;
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', META[l].d);
+    document.querySelectorAll('[data-setlang]').forEach(function (b) {
+      var on = b.getAttribute('data-setlang') === l;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem('ronbofit-lang', l); } catch (e) {}
+  }
+  document.querySelectorAll('[data-setlang]').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-setlang')); });
+  });
+  var saved = 'en';
+  try { saved = localStorage.getItem('ronbofit-lang') || 'en'; } catch (e) {}
+  if (saved === 'es') apply('es');
 })();
 </script>
 
