@@ -299,6 +299,10 @@
   .rcard{flex:0 0 auto;scroll-snap-align:start;text-decoration:none}
   .rcard img{width:min(248px,66vw);height:auto;display:block;border-radius:18px;box-shadow:0 10px 24px rgba(16,22,35,.14)}
   .rcar-hint{color:var(--muted,#5a6a66);font-size:14px;text-align:center;margin-top:2px}
+
+  /* ===== YouTube (2026-11-11) ===== */
+  .yt-top{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:#ff0000;text-decoration:none;flex:0 0 auto}
+  .yt-follow{background:#ff0000;color:#fff;font-weight:800;font-size:16.5px;text-decoration:none;padding:13px 24px;border-radius:999px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -312,6 +316,7 @@
         <button type="button" class="lang-btn" data-setlang="es" aria-pressed="false">ES</button>
       </div>
       <a class="ig-top" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" aria-label="RONBO FIT on Instagram — @ronbo.fit"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.5" cy="6.5" r="1.3" fill="#fff" stroke="none"/></svg></a>
+      <a class="yt-top" href="https://www.youtube.com/@ronbofit" target="_blank" rel="noopener" aria-label="RONBO FIT on YouTube — @ronbofit"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#fff" d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 12.9 12.9 0 0 0 2 12a12.9 12.9 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A12.9 12.9 0 0 0 22 12a12.9 12.9 0 0 0-.4-4.8Z"/><path fill="#ff0000" d="m10 15.2 5-3.2-5-3.2v6.4Z"/></svg></a>
       <a class="store-link" href="https://ronbo.store" data-i18n="storeLink">Store</a>
       <a class="mini-cta" href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a>
     </nav>
@@ -445,8 +450,8 @@
     <div class="trainer">
       <img class="tportrait" src="assets/ronald-gym.webp" width="360" height="360" loading="lazy" data-i18n-alt="altTrainerSmall" alt="Ronald Borges training at the gym">
       <div>
-        <h3 data-i18n="trainerH">Your trainer is a real person</h3>
-        <p data-i18n-html="trainerP">RONBO FIT was built — and is coached — by <b>Ronald Borges</b>, ISSA Certified Personal Trainer: the same person training in this photo, building your plan and following your progress with you.</p>
+        <h3 data-i18n="trainerH">Real trainers, a real founder</h3>
+        <p data-i18n-html="trainerP">RONBO FIT was founded by <b>Ronald Borges</b>, ISSA Certified Personal Trainer — the person training in this photo. From there, a <b>pool of certified trainers</b> builds your plan and follows your progress with you: you never train alone.</p>
       </div>
     </div>
   </div>
@@ -532,25 +537,26 @@
         <div class="ig-sub" data-i18n="recBandSub">Recipes, training and the app&#8217;s news — every week.</div>
       </div>
       <a class="ig-follow" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" data-i18n="recFollow">Follow us</a>
+      <a class="yt-follow" href="https://www.youtube.com/@ronbofit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" style="vertical-align:-3px;margin-right:7px"><path fill="#fff" d="m8 5.5 11 6.5-11 6.5z"/></svg>YouTube</a>
     </div>
     <div class="rcar">
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-00-portada-semana.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Eat well this week — the RONBO FIT weekly recipes cover · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-01-huevos-cottage.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Cottage cheese scrambled eggs — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-02-avena-nocturna.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Overnight oats with Greek yogurt — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-03-atun-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Tuna and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-04-pollo-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Grilled chicken, broccoli and quinoa — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-05-lentejas.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Stewed lentils with vegetables — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-06-tacos-frijoles.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Black bean tacos with avocado — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-07-salmon.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Salmon with sweet potato and spinach — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-08-huevos-keto.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Keto eggs with avocado and cheese — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-09-curry-garbanzos.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chickpea curry with brown rice — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-10-wrap-pavo.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Turkey and cheese wrap — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-11-ensalada-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Quinoa and chickpea salad — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-12-carne-papa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Ground beef with potato and carrot — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-13-pasta-atun.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Pasta with tuna, tomato and onion — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-14-yogur-nueces.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Greek yogurt with walnuts and honey — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-15-pozole.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Light chicken pozole — recipe card with calories and macros · RONBO FIT"></a>
-        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-16-pollo-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chicken and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/" target="_blank" rel="noopener"><img src="assets/recipes/receta-00-portada-semana.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Eat well this week — the RONBO FIT weekly recipes cover · RONBO FIT"></a>
+        <a class="rcard" href="recipes/cottage-cheese-scrambled-eggs.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-01-huevos-cottage.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Cottage cheese scrambled eggs — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/overnight-oats-with-greek-yogurt-and-walnuts.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-02-avena-nocturna.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Overnight oats with Greek yogurt — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/tuna-and-avocado-salad.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-03-atun-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Tuna and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/grilled-chicken-with-broccoli-and-quinoa.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-04-pollo-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Grilled chicken, broccoli and quinoa — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/stewed-lentils-with-vegetables.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-05-lentejas.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Stewed lentils with vegetables — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/black-bean-tacos-with-avocado.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-06-tacos-frijoles.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Black bean tacos with avocado — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/salmon-with-sweet-potato-and-spinach.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-07-salmon.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Salmon with sweet potato and spinach — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/keto-eggs-with-avocado-and-cheese.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-08-huevos-keto.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Keto eggs with avocado and cheese — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/chickpea-curry-with-brown-rice.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-09-curry-garbanzos.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chickpea curry with brown rice — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/turkey-and-cheese-wrap.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-10-wrap-pavo.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Turkey and cheese wrap — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/quinoa-and-chickpea-salad.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-11-ensalada-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Quinoa and chickpea salad — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/ground-beef-with-potato-and-carrot.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-12-carne-papa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Ground beef with potato and carrot — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/pasta-with-tuna-tomato-and-onion.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-13-pasta-atun.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Pasta with tuna, tomato and onion — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/greek-yogurt-with-walnuts-and-honey.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-14-yogur-nueces.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Greek yogurt with walnuts and honey — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/light-chicken-pozole.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-15-pozole.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Light chicken pozole — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="recipes/chicken-and-avocado-salad.html" target="_blank" rel="noopener"><img src="assets/recipes/receta-16-pollo-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chicken and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
     </div>
     <p class="rcar-hint" data-i18n="recHint">Scroll sideways — tap any recipe to find it on our Instagram.</p>
   </div>
@@ -711,7 +717,7 @@
   <div class="wrap">
     <div class="foot-wm">RONBO.FIT</div>
     <div class="foot-slogan" data-i18n="footSlogan">Eat well. Train strong. Live present.</div>
-    <p><a href="https://ronbo.store" data-i18n="storeLink">Store</a> · <a href="privacy.html" data-i18n="footPrivacy">Privacy</a> · <a href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a> · <a href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener">Instagram</a></p>
+    <p><a href="https://ronbo.store" data-i18n="storeLink">Store</a> · <a href="privacy.html" data-i18n="footPrivacy">Privacy</a> · <a href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a> · <a href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@ronbofit" target="_blank" rel="noopener">YouTube</a></p>
     <p data-i18n-html="footStudents">Students &amp; trainers: <a href="mailto:ronbo.fit@gmail.com">ronbo.fit@gmail.com</a></p>
     <p>© 2026 RONBO FIT · fit.ronbo.store<br>
     <span data-i18n="footLegal">No medical advice; always consult your physician about your health.</span></p>
@@ -821,8 +827,8 @@
     altLib: "Biblioteca real de ejercicios de RONBO FIT: ejercicios de pecho y espalda con foto y nivel",
     capStart: "Todo empieza aquí — tu cuenta en menos de un minuto.",
     altStart: "Pantalla real de acceso a RONBO FIT con el eslogan Come bien. Entrena fuerte. Vive el presente.",
-    trainerH: "Tu entrenador es una persona real",
-    trainerP: "RONBO FIT fue creada — y la entrena — <b>Ronald Borges</b>, entrenador personal certificado por ISSA: la misma persona que entrena en esta foto, arma tu plan y sigue tu progreso contigo.",
+    trainerH: "Entrenadores reales, un fundador real",
+    trainerP: "RONBO FIT fue fundada por <b>Ronald Borges</b>, entrenador personal certificado por ISSA — la persona que entrena en esta foto. Desde ahí, un <b>equipo de entrenadores certificados</b> arma tu plan y sigue tu progreso contigo: nunca entrenas solo.",
     altTrainerSmall: "Ronald Borges entrenando en el gimnasio",
     howTitle: "Empieza en tres pasos",
     step1H: "Consigue la app y crea tu cuenta",
@@ -945,8 +951,8 @@
     altLib: "Real RONBO FIT exercise library: chest and back exercises with photos and levels",
     capStart: "It all starts here — your account in under a minute.",
     altStart: "Real RONBO FIT sign-in screen with the slogan Eat well. Train strong. Live present.",
-    trainerH: "Your trainer is a real person",
-    trainerP: "RONBO FIT was built — and is coached — by <b>Ronald Borges</b>, ISSA Certified Personal Trainer: the same person training in this photo, building your plan and following your progress with you.",
+    trainerH: "Real trainers, a real founder",
+    trainerP: "RONBO FIT was founded by <b>Ronald Borges</b>, ISSA Certified Personal Trainer — the person training in this photo. From there, a <b>pool of certified trainers</b> builds your plan and follows your progress with you: you never train alone.",
     altTrainerSmall: "Ronald Borges training at the gym",
     howTitle: "Start in three steps",
     step1H: "Get the app and create your account",
