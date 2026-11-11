@@ -281,6 +281,24 @@
     .step{flex:1}
     .sec-title{font-size:31px}
   }
+
+  /* ===== Recetas + Instagram (2026-11-11) ===== */
+  .ig-top{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);text-decoration:none;flex:0 0 auto}
+  .recipes{background:#fff;border-top:1px solid var(--line,#e3e8e6)}
+  .ig-band{display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:var(--bg,#f6faf9);border:1px solid var(--line,#e3e8e6);
+    border-radius:20px;padding:20px 22px;margin:26px 0 22px}
+  .ig-big{display:inline-flex;align-items:center;justify-content:center;width:78px;height:78px;border-radius:22px;flex:0 0 auto;
+    background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);box-shadow:0 10px 22px rgba(190,30,90,.28)}
+  .ig-band-txt{flex:1 1 220px;min-width:200px}
+  .ig-handle{font-size:26px;font-weight:800;letter-spacing:.01em}
+  .ig-sub{color:var(--muted,#5a6a66);font-size:15.5px;margin-top:2px}
+  .ig-follow{background:var(--brand,#07949e);color:#fff;font-weight:800;font-size:16.5px;text-decoration:none;
+    padding:13px 26px;border-radius:999px;white-space:nowrap}
+  .rcar{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch}
+  .rcard{flex:0 0 auto;scroll-snap-align:start;text-decoration:none}
+  .rcard img{width:min(248px,66vw);height:auto;display:block;border-radius:18px;box-shadow:0 10px 24px rgba(16,22,35,.14)}
+  .rcar-hint{color:var(--muted,#5a6a66);font-size:14px;text-align:center;margin-top:2px}
 </style>
 </head>
 <body>
@@ -293,6 +311,7 @@
         <button type="button" class="lang-btn on" data-setlang="en" aria-pressed="true">EN</button>
         <button type="button" class="lang-btn" data-setlang="es" aria-pressed="false">ES</button>
       </div>
+      <a class="ig-top" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" aria-label="RONBO FIT on Instagram — @ronbo.fit"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.5" cy="6.5" r="1.3" fill="#fff" stroke="none"/></svg></a>
       <a class="store-link" href="https://ronbo.store" data-i18n="storeLink">Store</a>
       <a class="mini-cta" href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a>
     </nav>
@@ -500,6 +519,43 @@
   </div>
 </section>
 
+
+<!-- ================= RECETAS / INSTAGRAM ================= -->
+<section class="recipes" id="recipes">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="recTitle">Eat well this week</h2>
+    <p class="sec-sub" data-i18n="recSub">The app&#8217;s own recipe book: real dishes with calories and macros calculated from USDA data, ready to drop into your weekly menu. Every Sunday, a fresh carousel of recipes on our Instagram.</p>
+    <div class="ig-band">
+      <a class="ig-big" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" aria-label="RONBO FIT on Instagram — @ronbo.fit"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.9" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.5" cy="6.5" r="1.35" fill="#fff" stroke="none"/></svg></a>
+      <div class="ig-band-txt">
+        <div class="ig-handle">@ronbo.fit</div>
+        <div class="ig-sub" data-i18n="recBandSub">Recipes, training and the app&#8217;s news — every week.</div>
+      </div>
+      <a class="ig-follow" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" data-i18n="recFollow">Follow us</a>
+    </div>
+    <div class="rcar">
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-00-portada-semana.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Eat well this week — the RONBO FIT weekly recipes cover · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-01-huevos-cottage.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Cottage cheese scrambled eggs — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-02-avena-nocturna.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Overnight oats with Greek yogurt — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-03-atun-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Tuna and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-04-pollo-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Grilled chicken, broccoli and quinoa — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-05-lentejas.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Stewed lentils with vegetables — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-06-tacos-frijoles.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Black bean tacos with avocado — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-07-salmon.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Salmon with sweet potato and spinach — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-08-huevos-keto.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Keto eggs with avocado and cheese — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-09-curry-garbanzos.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chickpea curry with brown rice — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-10-wrap-pavo.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Turkey and cheese wrap — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-11-ensalada-quinoa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Quinoa and chickpea salad — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-12-carne-papa.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Ground beef with potato and carrot — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-13-pasta-atun.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Pasta with tuna, tomato and onion — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-14-yogur-nueces.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Greek yogurt with walnuts and honey — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-15-pozole.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Light chicken pozole — recipe card with calories and macros · RONBO FIT"></a>
+        <a class="rcard" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener"><img src="assets/recipes/receta-16-pollo-aguacate.jpg" width="1080" height="1350" loading="lazy" data-i18n-alt="recAlt" alt="Chicken and avocado salad — recipe card with calories and macros · RONBO FIT"></a>
+    </div>
+    <p class="rcar-hint" data-i18n="recHint">Scroll sideways — tap any recipe to find it on our Instagram.</p>
+  </div>
+</section>
+
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section id="how">
   <div class="wrap">
@@ -655,7 +711,7 @@
   <div class="wrap">
     <div class="foot-wm">RONBO.FIT</div>
     <div class="foot-slogan" data-i18n="footSlogan">Eat well. Train strong. Live present.</div>
-    <p><a href="https://ronbo.store" data-i18n="storeLink">Store</a> · <a href="privacy.html" data-i18n="footPrivacy">Privacy</a> · <a href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a></p>
+    <p><a href="https://ronbo.store" data-i18n="storeLink">Store</a> · <a href="privacy.html" data-i18n="footPrivacy">Privacy</a> · <a href="https://fit.ronbo.store" data-i18n="getApp">Get the app</a> · <a href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener">Instagram</a></p>
     <p data-i18n-html="footStudents">Students &amp; trainers: <a href="mailto:ronbo.fit@gmail.com">ronbo.fit@gmail.com</a></p>
     <p>© 2026 RONBO FIT · fit.ronbo.store<br>
     <span data-i18n="footLegal">No medical advice; always consult your physician about your health.</span></p>
@@ -783,6 +839,12 @@
     footStudents: "Alumnos y entrenadores: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
     footLegal: "Sin consejo médico; consulta siempre a tu médico sobre tu salud.",
     footCredits: "Fotos de las tarjetas: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes y Annushka Ahuja vía Pexels (uso libre). Fotos de la sección de IA: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk y Kampus Production, vía Pexels.",
+    recTitle: "Come bien esta semana",
+    recSub: "El recetario propio de la app: platos reales con calorías y macros calculados con datos de USDA, listos para entrar en tu menú semanal. Cada domingo, un carrusel nuevo de recetas en nuestro Instagram.",
+    recBandSub: "Recetas, entrenamiento y novedades de la app, cada semana.",
+    recFollow: "Síguenos",
+    recHint: "Desliza hacia el lado: toca cualquier receta para encontrarla en nuestro Instagram.",
+    recAlt: "Tarjeta de receta del recetario de RONBO FIT, con sus calorías y macros",
     aiTitle: "La IA que escribe por ti",
     aiSub: "Siete trabajos que la app hace con inteligencia artificial, explicados sin rodeos: tú lo muestras o lo dices, ella escribe — y nada se guarda jamás hasta que tú lo confirmas.",
     ai1H: "Desde una foto de tu plato",
@@ -901,6 +963,12 @@
     footStudents: "Students &amp; trainers: <a href=\"mailto:ronbo.fit@gmail.com\">ronbo.fit@gmail.com</a>",
     footLegal: "No medical advice; always consult your physician about your health.",
     footCredits: "Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use). AI section photos: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk and Kampus Production, via Pexels.",
+    recTitle: "Eat well this week",
+    recSub: "The app\u2019s own recipe book: real dishes with calories and macros calculated from USDA data, ready to drop into your weekly menu. Every Sunday, a fresh carousel of recipes on our Instagram.",
+    recBandSub: "Recipes, training and the app\u2019s news — every week.",
+    recFollow: "Follow us",
+    recHint: "Scroll sideways — tap any recipe to find it on our Instagram.",
+    recAlt: "Recipe card from the RONBO FIT recipe book, with its calories and macros",
     aiTitle: "AI that does the typing for you",
     aiSub: "Seven jobs the app does with artificial intelligence, explained plainly: you show it or say it, it does the writing — and nothing is ever saved until you confirm it.",
     ai1H: "From a photo of your plate",
