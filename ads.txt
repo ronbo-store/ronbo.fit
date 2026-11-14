@@ -1,6 +1,2 @@
-# ads.txt — RONBO FIT (https://ronbo.fit)
-# Status (2026-11-10): no advertising partners yet and no ad code runs on this site.
-# When an advertising account exists, add its authorized line here, in this form:
-# <ad-system-domain>, <publisher-id>, <relationship>, <certification-id>
-# Example (placeholder, not a real account):
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-1324974963276025, DIRECT, f08c47fec0942fa0
+# ads.txt — RONBO FIT (https://ronbo.fit) · Cuenta de AdSense conectada el 2026-11-14; sitio en revisión de Google.
