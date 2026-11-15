@@ -171,6 +171,9 @@
   .bcard .ic svg{width:26px;height:26px}
   .bcard h3{font-size:17.5px;font-weight:800;margin-top:12px;line-height:1.3}
   .bcard p{font-size:14.5px;line-height:1.55;margin-top:7px}
+  .grid.lane{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch}
+  .grid.lane .bcard{flex:0 0 85%;scroll-snap-align:start}
+  @media (min-width:760px){.grid.lane .bcard{flex-basis:31.8%}}
 
   .privacy{margin-top:14px;background:var(--brand-dark);color:#fff;border-radius:18px;
     padding:24px 22px;display:flex;gap:16px;align-items:flex-start}
@@ -362,7 +365,7 @@
     <h2 class="sec-title" data-i18n="benTitle">Everything works together for your goal</h2>
     <p class="sec-sub" data-i18n="benSub">No scattered apps, no guesswork: one plan that connects what you eat, how you train and how you advance.</p>
 
-    <div class="grid">
+    <div class="grid lane">
       <div class="bcard">
         <div class="bphoto"><img src="assets/card-goals.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altGoals" alt="A member at the gym checking her phone and her goals"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
@@ -451,7 +454,7 @@
     <h2 class="sec-title" data-i18n="aiTitle">AI that does the typing for you</h2>
     <p class="sec-sub" data-i18n="aiSub">Seven jobs the app does with artificial intelligence, explained plainly: you show it or say it, it does the writing — and nothing is ever saved until you confirm it.</p>
 
-    <div class="grid">
+    <div class="grid lane">
       <div class="bcard">
         <div class="bphoto"><img src="assets/card-meals.webp" width="1000" height="625" loading="lazy" data-i18n-alt="altAiPhoto" alt="Photographing a plate of food with a phone so the AI can analyze it"></div>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.4"/></svg></div>
