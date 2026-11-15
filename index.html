@@ -299,6 +299,12 @@
   .rcard{flex:0 0 auto;scroll-snap-align:start;text-decoration:none}
   .rcard img{width:min(248px,66vw);height:auto;display:block;border-radius:18px;box-shadow:0 10px 24px rgba(16,22,35,.14)}
   .rcar-hint{color:var(--muted,#5a6a66);font-size:14px;text-align:center;margin-top:2px}
+  .rec-stat{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:linear-gradient(135deg,var(--brand,#07949e),#065f68);
+    border-radius:20px;padding:22px 24px;margin:24px 0 2px;color:#fff}
+  .rec-stat-num{font-size:56px;font-weight:800;line-height:1;letter-spacing:.01em}
+  .rec-stat-txt{flex:1 1 260px;min-width:220px}
+  .rec-stat-h{font-size:20px;font-weight:800}
+  .rec-stat-p{font-size:15.5px;line-height:1.5;opacity:.95;margin-top:4px}
 
   /* ===== YouTube (2026-11-11) ===== */
   .yt-top{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:#ff0000;text-decoration:none;flex:0 0 auto}
@@ -532,6 +538,13 @@
   <div class="wrap">
     <h2 class="sec-title" data-i18n="recTitle">Eat well this week</h2>
     <p class="sec-sub" data-i18n="recSub">The app&#8217;s own recipe book: real dishes with calories and macros calculated from USDA data, ready to drop into your weekly menu. Every Sunday, a fresh carousel of recipes on our Instagram.</p>
+    <div class="rec-stat">
+      <div class="rec-stat-num" data-i18n="recCountNum">1,147</div>
+      <div class="rec-stat-txt">
+        <div class="rec-stat-h" data-i18n="recCountH">recipes waiting for you in the app</div>
+        <p class="rec-stat-p" data-i18n="recCountP">Every recipe shows its calories and macros, and inside the app it adjusts to your own goals and metrics — so you organize your meals with dishes that already fit your day.</p>
+      </div>
+    </div>
     <div class="ig-band">
       <a class="ig-big" href="https://www.instagram.com/ronbo.fit" target="_blank" rel="noopener" aria-label="RONBO FIT on Instagram — @ronbo.fit"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.9" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.5" cy="6.5" r="1.35" fill="#fff" stroke="none"/></svg></a>
       <div class="ig-band-txt">
@@ -849,6 +862,9 @@
     footLegal: "Sin consejo médico; consulta siempre a tu médico sobre tu salud.",
     footCredits: "Fotos de las tarjetas: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes y Annushka Ahuja vía Pexels (uso libre). Fotos de la sección de IA: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk y Kampus Production, vía Pexels.",
     recTitle: "Come bien esta semana",
+    recCountNum: "1.147",
+    recCountH: "recetas esperándote en la app",
+    recCountP: "Cada receta muestra sus calorías y macros, y dentro de la app se ajusta a tus propias metas y métricas: así organizas tus comidas con platos que ya encajan en tu día.",
     recSub: "El recetario propio de la app: platos reales con calorías y macros calculados con datos de USDA, listos para entrar en tu menú semanal. Cada domingo, un carrusel nuevo de recetas en nuestro Instagram.",
     recBandSub: "Recetas, entrenamiento y novedades de la app, cada semana.",
     recFollow: "Síguenos",
@@ -973,6 +989,9 @@
     footLegal: "No medical advice; always consult your physician about your health.",
     footCredits: "Card photos: Andrea Piacquadio, Ivan S, Kaboompics, Helena Lopes and Annushka Ahuja via Pexels (free to use). AI section photos: Andrea Piacquadio, RDNE Stock project, Pavel Danilyuk and Kampus Production, via Pexels.",
     recTitle: "Eat well this week",
+    recCountNum: "1,147",
+    recCountH: "recipes waiting for you in the app",
+    recCountP: "Every recipe shows its calories and macros, and inside the app it adjusts to your own goals and metrics — so you organize your meals with dishes that already fit your day.",
     recSub: "The app\u2019s own recipe book: real dishes with calories and macros calculated from USDA data, ready to drop into your weekly menu. Every Sunday, a fresh carousel of recipes on our Instagram.",
     recBandSub: "Recipes, training and the app\u2019s news — every week.",
     recFollow: "Follow us",
